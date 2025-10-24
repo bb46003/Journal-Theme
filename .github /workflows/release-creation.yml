@@ -79,8 +79,9 @@ jobs:
           # Note that `zip` will only emit warnings when a file or directory
           # doesn't exist, it will not fail.
           zip --recurse-paths ./module.zip \
-           main.mjs journal-theme.css jurnal-theme.hbs module.json lang/ assets/ jurnal-theme-dialog.mjs config.mjs
-
+                config.mjs  journal-theme.css  jurma-theme.hbs  jurnal-theme-dialog.mjs  main.mjs module.json  lang/ assets/
+           
+  
       # This workflow step creates the release on the GitHub project, using values entered into the GitHub release
       # form that triggered the workflow. It then adds the module.json and module.zip to the release.
       #
