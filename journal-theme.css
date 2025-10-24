@@ -181,3 +181,1011 @@
         max-height: calc(100vh - 80px);
     }
 }
+.application.sheet.journal-sheet.journal-entry.freedomcity {
+    background: url("assets/theme/americanbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.freedomcity .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.freedomcity header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.freedomcity .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.freedomcity .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/americanbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.freedomcity .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.freedomcity .journal-sidebar .toc .page-heading,
+.journal-entry.freedomcity .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.freedomcity .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.freedomcity .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.freedomcity .content-link,
+.journal-entry.freedomcity .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.freedomcity .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.freedomcity .content-link,
+.journal-entry.freedomcity .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on freedomcity header */
+.journal-entry.freedomcity header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.freedomcity .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.freedomcity.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.freedomcity {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.techblue {
+    background: url("assets/theme/darkbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.techblue .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.techblue header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.techblue .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.techblue .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/darkbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.techblue .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.techblue .journal-sidebar .toc .page-heading,
+.journal-entry.techblue .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.techblue .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.techblue .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.techblue .content-link,
+.journal-entry.techblue .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.techblue .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.techblue .content-link,
+.journal-entry.techblue .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on techblue header */
+.journal-entry.techblue header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.techblue .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.techblue.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.techblue {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.techblue2 {
+    background: url("assets/theme/darkerbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.techblue2 .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.techblue2 header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.techblue2 .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.techblue2 .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/darkerbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.techblue2 .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.techblue2 .journal-sidebar .toc .page-heading,
+.journal-entry.techblue2 .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.techblue2 .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.techblue2 .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.techblue2 .content-link,
+.journal-entry.techblue2 .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.techblue2 .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.techblue2 .content-link,
+.journal-entry.techblue2 .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on techblue2 header */
+.journal-entry.techblue2 header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.techblue2 .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.techblue2.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.techblue2 {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.bloodred {
+    background: url("assets/theme/bloodrednoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.bloodred .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.bloodred header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.bloodred .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.bloodred .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/bloodrednoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.bloodred .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.bloodred .journal-sidebar .toc .page-heading,
+.journal-entry.bloodred .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.bloodred .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.bloodred .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.bloodred .content-link,
+.journal-entry.bloodred .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.bloodred .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.bloodred .content-link,
+.journal-entry.bloodred .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on bloodred header */
+.journal-entry.bloodred header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.bloodred .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.bloodred.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.bloodred {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.bloodred2 {
+    background: url("assets/theme/bloodred2noise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.bloodred2 .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.bloodred2 header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.bloodred2 .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.bloodred2 .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/bloodred2noise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.bloodred2 .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.bloodred2 .journal-sidebar .toc .page-heading,
+.journal-entry.bloodred2 .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.bloodred2 .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.bloodred2 .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.bloodred2 .content-link,
+.journal-entry.bloodred2 .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.bloodred2 .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.bloodred2 .content-link,
+.journal-entry.bloodred2 .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on bloodred header */
+.journal-entry.bloodred2 header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.bloodred2 .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.bloodred2.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.bloodred2 {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.gothblack {
+    background: url("assets/theme/blacknoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.gothblack .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.gothblack header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.gothblack .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.gothblack .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/blacknoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.gothblack .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.gothblack .journal-sidebar .toc .page-heading,
+.journal-entry.gothblack .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.gothblack .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.gothblack .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.gothblack .content-link,
+.journal-entry.gothblack .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.gothblack .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.gothblack .content-link,
+.journal-entry.gothblack .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on bloodred header */
+.journal-entry.gothblack header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.gothblack .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.gothblack.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.gothblack {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.cosmicblue {
+    background: url("assets/theme/darkbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.cosmicblue .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.cosmicblue header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.cosmicblue .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.cosmicblue .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/darkbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.cosmicblue .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.cosmicblue .journal-sidebar .toc .page-heading,
+.journal-entry.cosmicblue .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.cosmicblue .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.cosmicblue .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.cosmicblue .content-link,
+.journal-entry.cosmicblue .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.cosmicblue .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.cosmicblue .content-link,
+.journal-entry.cosmicblue .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on bloodred header */
+.journal-entry.cosmicblue header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.cosmicblue .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.cosmicblue.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.cosmicblue {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.starburst {
+    background: url("assets/theme/darkerbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.starburst .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.starburst header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.starburst .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.starburst .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/darkerbluenoise.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.starburst .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.starburst .journal-sidebar .toc .page-heading,
+.journal-entry.starburst .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.starburst .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.starburst .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.starburst .content-link,
+.journal-entry.starburst .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.starburst .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.starburst .content-link,
+.journal-entry.starburst .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on bloodred header */
+.journal-entry.starburst header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.starburst .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.starburst.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.starburst {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
+.application.sheet.journal-sheet.journal-entry.matrixblack {
+    background: url("assets/theme/blackmatrix.webp");
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+/* If you prefer the window to behave responsively, remove width/height
+   and use max-width/max-height instead. */
+
+/* Title input styling (scoped) */
+.journal-entry.matrixblack .journal-header .title {
+    background: rgba(128, 164, 128, 0.8);
+}
+
+/* Header window title (extracted inline h1 styles) */
+.journal-entry.matrixblack header.window-header .window-title {
+    font-family: "Big Noodle Titling", sans-serif;
+    /* "x-large" mapped to explicit size for consistency */
+    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Sidebar (border extracted) */
+.journal-entry.matrixblack .journal-sidebar {
+    border: solid 1px #001600;
+}
+
+/* Content area border (extracted) */
+.journal-entry.matrixblack .journal-entry-content {
+    border: solid 1px #001600;
+    background: url("assets/theme/blackmatrix.webp");
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+/* Font variable definitions for page content (keeps original intent) */
+.journal-entry.matrixblack .journal-entry-page {
+    --headerFont: "Big Noodle Titling";
+    --font-h1: var(--headerFont);
+    --font-h2: var(--headerFont);
+    --font-h3: var(--headerFont);
+    --font-h4: var(--headerFont);
+    --font-h5: var(--headerFont);
+    --font-h6: var(--headerFont);
+    --font-h1-size: 2.25em;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.5em;
+    --font-h4-size: 1.25em;
+    --font-h5-size: 1em;
+    --font-h6-size: 0.83em;
+}
+
+/* Sidebar TOC headings - use explicit selectors present in Foundry */
+.journal-entry.matrixblack .journal-sidebar .toc .page-heading,
+.journal-entry.matrixblack .journal-sidebar .toc .h1 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.5em;
+}
+
+/* Smaller heading sizes in TOC */
+.journal-entry.matrixblack .journal-sidebar .toc .h2 .heading-link {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+.journal-entry.matrixblack .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.matrixblack .content-link,
+.journal-entry.matrixblack .inline-roll {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.25em;
+}
+
+/* Window app header h4 color (fixed syntax - no quotes around color) */
+.journal-entry.matrixblack .window-app header.window-header h4 {
+    color: "#eoffeo"; /* keep as hex; make sure this is valid color */
+}
+
+/* Links and inline rolls color */
+.journal-entry.matrixblack .content-link,
+.journal-entry.matrixblack .inline-roll {
+    color: white;
+}
+
+/* Small niceties: ensure button icons contrast on bloodred header */
+.journal-entry.matrixblack header.window-header .header-control {
+    color: #f8fff8;
+}
+
+/* Optional: reduce transparency and add subtle shadow to the journal content */
+.journal-entry.matrixblack .journal-entry-pages {
+    background: rgba(0, 10, 0, 0.25);
+    backdrop-filter: blur(0.5px);
+}
+
+/* If you want the .expanded variant to have slightly different layout, add rules: */
+.application.sheet.journal-sheet.journal-entry.matrixblack.expanded {
+    /* Example: slightly larger box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive suggestions (optional) */
+@media (max-width: 1100px) {
+    .application.sheet.journal-sheet.journal-entry.matrixblack {
+        width: 95%;
+        left: 2.5%;
+        top: 40px;
+        height: auto;
+        max-height: calc(100vh - 80px);
+    }
+}
