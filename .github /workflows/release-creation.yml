@@ -75,12 +75,13 @@ jobs:
       #
       # Create a "module.zip" archive containing all the module's required files.
       - name: Create Module Archive
-          run: |
-            rm -f module.zip
-            zip -r module.zip . -x ".vscode/*" ".github/*" "module.zip"
-            unzip -l module.zip
+        run: |
+          # Note that `zip` will only emit warnings when a file or directory
+          # doesn't exist, it will not fail.
+          zip --recurse-paths ./module.zip \
+            module.json main.mjs jurnal-theme-dialogs.mjs journal-theme.css config.mjs lang/ assets/
+          
            
-  
       # This workflow step creates the release on the GitHub project, using values entered into the GitHub release
       # form that triggered the workflow. It then adds the module.json and module.zip to the release.
       #
