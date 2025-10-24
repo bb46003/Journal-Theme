@@ -76,10 +76,7 @@ jobs:
       # Create a "module.zip" archive containing all the module's required files.
       - name: Create Module Archive
         run: |
-          # Note that `zip` will only emit warnings when a file or directory
-          # doesn't exist, it will not fail.
-          zip --recurse-paths ./module.zip \
-                 module.json main.mjs jurnal-theme-dialog.mjs jurna-theme.hbs journal-theme.css config.mjs lang/ assets/
+          zip -r ./module.zip . -x ".vscode/*" ".github/*"
            
   
       # This workflow step creates the release on the GitHub project, using values entered into the GitHub release
