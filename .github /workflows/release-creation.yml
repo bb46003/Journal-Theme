@@ -75,8 +75,10 @@ jobs:
       #
       # Create a "module.zip" archive containing all the module's required files.
       - name: Create Module Archive
-        run: |
-          zip -r ./module.zip . -x ".vscode/*" ".github/*"
+          run: |
+            rm -f module.zip
+            zip -r module.zip . -x ".vscode/*" ".github/*" "module.zip"
+            unzip -l module.zip
            
   
       # This workflow step creates the release on the GitHub project, using values entered into the GitHub release
