@@ -1,5 +1,5 @@
 import { JT } from "./config.mjs";
-import { JournalThemeDialog } from "./jurnal-theme-dialog.mjs";
+import { JournalThemeDialog } from "./journal-theme-dialog.mjs";
 
 Hooks.once("init", async function () {
   CONFIG.JT = JT;
