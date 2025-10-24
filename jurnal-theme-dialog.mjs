@@ -8,7 +8,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
       height: "auto",
     },
     template:
-      "systems/mutants-and-masterminds-3e/templates/dialog/jurma-theme.hbs",
+      "modules/journal-theme/jurma-theme.hbs",
     window: { title: "JT.JURNAL.title" },
   };
 
