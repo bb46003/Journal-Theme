@@ -1,0 +1,22 @@
+{
+  "JT": {
+    "THEME": {
+      "label": "Select your character sheet theme",
+      "default": "System default",
+      "emeralcity": "Emerald City",
+      "freedomcity": "Freedom City",
+      "techblue": "Tech Blue",
+      "techblue2": "Tech Blue 2",
+      "bloodred": "Blood Red",
+      "bloodred2": "Blood Red 2",
+      "gothblack": "Goth Black",
+      "cosmicblue": "Cosmic Blue",
+      "starburst": "Star Burst",
+      "matrixblack": "Matrix Black",
+      "defaultFont": "Default Font"
+    },
+    "JURNAL": {
+      "ThemeTooltip": "Click to pnem Theme and Font selector"
+    }
+  }
+}

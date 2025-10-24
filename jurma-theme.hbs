@@ -1,0 +1,25 @@
+<div>
+  <label>{{localize "JT.JOURNAL.SelectYourTheme"}}</label>
+  <div>
+    <label>{{localize "JT.THEME.journalTheme"}}</label>
+    {{log selectedTheme}}
+    <select id="theme">
+      {{selectOptions listtheme selected=selectedTheme localize=true}}
+    </select>
+  </div>
+  <div>
+    <label>{{localize "JT.THEME.journalHeaderFont"}}</label>
+    <select id="headerFont">
+      <option value="">{{localize "JT.THEME.defaultFont"}}</option>
+      {{selectOptions headerFont selected=selectedHederFont localize=true}}
+    </select>
+  </div>
+  <div>
+    <label>{{localize "JT.THEME.journalBodyFont"}}</label>
+    <select id="bodyFont">
+      <option value="">{{localize "JT.THEME.defaultFont"}}</option>
+      {{selectOptions textFont selected=selectedBodyFont localize=true}}
+    </select>
+  </div>
+  <button data-action="applyTheme">{{localize "APPLY"}}</button>
+</div>

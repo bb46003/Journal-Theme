@@ -1,0 +1,36 @@
+{
+  "id": "journal-theme",
+  "title": "Jurnal Theme Selector",
+  "version": "vDev",
+
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13.345"
+  },
+
+  "esmodules": ["main.mjs"],
+  "styles": ["journal-theme.css"],
+
+  "authors": [
+    {
+      "name": "Bartek",
+      "discord": "bartek6199",
+      "flags": {}
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    }
+  ],
+  "url": "Filled in by the release workflow",
+  "manifest": "Filled in by the release workflow",
+  "download": "Filled in by the release workflow"
+}
