@@ -63,14 +63,14 @@
 
 @font-face {
   font-family: "Big Noodle Titling";
-  src: url("../assets/font/big_noodle_titling.ttf") format("truetype");
+  src: url("..journal-theme/assets/font/big_noodle_titling.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Root form/window sizing & stacking (extracted from inline style)
    If you want this responsive, change/override accordingly. */
 .application.sheet.journal-sheet.journal-entry.green {
-    background: url("../assets/theme/darkgreennoise.webp");
+    background: url("..journal-theme/assets/theme/darkgreennoise.webp");
     background-repeat: repeat;
     background-size: auto;
     
@@ -101,7 +101,7 @@
 /* Content area border (extracted) */
 .journal-entry.green .journal-entry-content {
     border: solid 1px #001600;
-    background: url("../assets/theme/darkgreennoise.webp");
+    background: url("..journal-theme/assets/theme/darkgreennoise.webp");
     background-repeat: repeat;
     background-size: auto;
 }
