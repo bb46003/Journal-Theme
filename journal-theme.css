@@ -753,7 +753,7 @@
 
 /* Title input styling (scoped) */
 .journal-entry.gothblack .journal-header .title {
-    background: rgba(128, 164, 128, 0.8);
+    background: rgba(0, 0, 0, 1);
 }
 
 /* Header window title (extracted inline h1 styles) */
