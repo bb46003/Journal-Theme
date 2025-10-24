@@ -18,8 +18,6 @@ Hooks.once("init", async function () {
   });
   // Register the stored default theme for GM
   game.settings.register("journal-theme", "GMdefoultTheme", {
-    name: "JT.SETTING.GMdefoultTheme",
-    hint: "JT.SETTING.GMdefoultThemeHint",
     scope: "world",
     config: false,
     default: {},

@@ -13,10 +13,27 @@
       "cosmicblue": "Cosmic Blue",
       "starburst": "Star Burst",
       "matrixblack": "Matrix Black",
-      "defaultFont": "Default Font"
+      "defaultFont": "Default Font",
+      "journalTheme": "Journal Theme",
+      "journalHeaderFont": "Header Font",
+      "journalBodyFont": "Body Font"
     },
     "JURNAL": {
-      "ThemeTooltip": "Click to pnem Theme and Font selector"
+      "ThemeTooltip": "Click to pnem Theme and Font selector",
+      "title": "Theme Selector"
+    },
+    "JOURNAL": {
+      "SelectYourTheme": "Selest desier Journal Theme, Header Font and Body Font"
+    },
+    "APPLY": "Apply",
+    "SETTING": {
+      "MinOwnership": "Set minimum Ownership to allow for User set own Theme",
+      "MinOwnershipHint": "When user will open Jurnal in top header he will notice additional button allow to set own Theme and fonts. It will affext only THIS user."
+    },
+    "MENU": {
+      "ThemeConfig": "Set defoult Theme and fots for all new Jurnals",
+      "OpenDialog": "Open Theme selector dialog",
+      "ThemeConfigHint": "This settings will apply to all Jurnal where users do not change Theme"
     }
   }
 }

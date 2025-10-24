@@ -33,15 +33,19 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     const journalUuid = this.options.uuid;
     const journalEntry = await fromUuid(journalUuid);
     const headerFont = CONFIG.JT.JurnalHeaderFont;
-    const flagTheme = journalEntry?.flags?.JT?.[userID]?.theme;
-    const flagHederFont = journalEntry?.flags?.JT?.[userID]?.headerFont;
-    const flagBodyFont = journalEntry?.flags?.JT?.[userID]?.bodyFont;
+    const gmDefault =
+      game.settings.get("journal-theme", "GMdefoultTheme") || {};
+    const jtFlags = journalEntry?.flags?.JT || {};
+    const flags = jtFlags[userID] ?? jtFlags["default"] ?? {};
+    const flagTheme = flags.theme ?? gmDefault.theme;
+    const flagHeaderFont = flags.headerFont ?? gmDefault.headerFont;
+    const flagBodyFont = flags.bodyFont ?? gmDefault.bodyFont;
     const data = {
       listtheme: CONFIG.JT.sheetTheme, // or whatever list you have
       headerFont: headerFont, // header fonts
       textFont: fonts,
       selectedTheme: flagTheme,
-      selectedHederFont: flagHederFont,
+      selectedHederFont: flagHeaderFont,
       selectedBodyFont: flagBodyFont, // body fonts
     };
 
@@ -66,7 +70,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     let userID = game.user.id;
     const newValues = {};
     selectors.forEach((select) => {
-      const id = select.id; 
+      const id = select.id;
       const value = select.value;
       newValues[id] = value;
     });
@@ -74,8 +78,8 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     if (journalUuid !== undefined) {
       const journalEntry = await fromUuid(journalUuid);
       const updateData = {};
-      if(isGM){
-        userID = "default"
+      if (isGM) {
+        userID = "default";
       }
       Object.entries(newValues).forEach(([key, value]) => {
         updateData[`flags.JT.${userID}.${key}`] = value;

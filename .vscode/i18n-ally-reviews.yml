@@ -7,924 +7,924 @@ reviews:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: jqYemqquvO6PWMp4cQiPc
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T20:52:56.811Z"
+            time: '2024-11-20T20:52:56.811Z'
   chlopcy.nowe_szlify.etykieta:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3z9B2wDFkORs4Wlnd0XWh
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T21:01:05.130Z"
+            time: '2024-11-20T21:01:05.130Z'
   chlopcy.sakwy:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: m2YdeU4c_4eBAaK5qwHua
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T21:23:43.059Z"
+            time: '2024-11-20T21:23:43.059Z'
   chlopcy.przytkanie:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: zWOrfcmMYAoJPQMLEaVT8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:53:20.951Z"
+            time: '2024-11-20T22:53:20.951Z'
   chlopcy.krwawienie:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0OwrmxE-T5YeLzR4yqRvn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:53:57.048Z"
+            time: '2024-11-20T22:53:57.048Z'
   chlopcy.odciecie:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rDtGP1Ph3vygEJcxD_ZNg
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:54:16.148Z"
+            time: '2024-11-20T22:54:16.148Z'
   chlopcy.sprzet_osobisty:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: f9DCOw9p0qi1Sj6X1UY9Q
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:54:49.879Z"
+            time: '2024-11-20T22:54:49.879Z'
   chlopcy.dodaj_wiezi:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YfxvFnpKxMlTHyolyIjiZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T22:56:22.202Z"
+            time: '2024-11-20T22:56:22.202Z'
   chlopcy.dodaj_wiez:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9T-vNeXeSVcBJmPiW1lde
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-20T23:01:38.091Z"
+            time: '2024-11-20T23:01:38.091Z'
   chlopcy.wybierz_tag:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: qm7ciLI4f-uDMIO9SCiOq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-24T12:46:43.767Z"
+            time: '2024-11-24T12:46:43.767Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: nYVLjFdlib1k6sbvL6nJ3
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-24T12:47:21.151Z"
+            time: '2024-11-24T12:47:21.151Z'
   chlopcy.bez_tagu:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: L2Xs748Vgt66XbCbzAGdp
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-24T15:31:59.152Z"
+            time: '2024-11-24T15:31:59.152Z'
   chlopcy.BANGARANG:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: GQxV1C99NdfYj1s-vPvUa
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:23:37.234Z"
+            time: '2024-11-25T13:23:37.234Z'
   chlopcy.rzut.BANGARANG:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ntMms_au3ERW2ELVqx4FX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:24:01.810Z"
+            time: '2024-11-25T13:24:01.810Z'
   chlopcy.rzut.dwa_osiagi:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: XckxNdvVdkAD022SLimx_
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:25:54.004Z"
+            time: '2024-11-25T13:25:54.004Z'
   chlopcy.rzut.jeden_osiag:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: UUWtq_zjWzWFi4RGmD5ZA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:27:10.469Z"
+            time: '2024-11-25T13:27:10.469Z'
   chlopcy.rzut.klopoty:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dXd3LCesMM2kDD6Oh9wMW
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T13:59:56.177Z"
+            time: '2024-11-25T13:59:56.177Z'
   chlopcy.rzut.brak_osiagow:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: wh11k98muoX9HA3KpxCHH
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:01:07.808Z"
+            time: '2024-11-25T14:01:07.808Z'
   chlopcy.czat.wynik_KB:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 2q5VK8owNEYpiYbUT6qsC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:31:32.636Z"
+            time: '2024-11-25T14:31:32.636Z'
   chlopcy.czat.dostepne_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: n0Vb2dmVoxfuyukpn-BUT
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:42:33.056Z"
+            time: '2024-11-25T14:42:33.056Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: MxFuzx1vDbdHCItraK7L8
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:58:32.124Z"
+            time: '2024-11-25T14:58:32.124Z'
   chlopcyczat.mod_tagu:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: bCe78Qseg8yjIeyTx-eR7
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T14:58:11.811Z"
+            time: '2024-11-25T14:58:11.811Z'
   chlopcy.czat.wynik_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: J5gbsQSOQlT6le5eKQOej
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T22:34:30.228Z"
+            time: '2024-11-25T22:34:30.228Z'
   chlopcy.czat.wynik_RDT:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9kwuoH6HKhC8MyTzv048-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T22:47:37.797Z"
+            time: '2024-11-25T22:47:37.797Z'
   chlopcy.dialog.wybierz_tag:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: CLxy7N4yazSVbERgfZQgZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-25T23:41:44.158Z"
+            time: '2024-11-25T23:41:44.158Z'
   chlopcy.rzut.trzy_osiagi:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: U0CGtpjy3AAEhKRzn9PEP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-26T08:21:00.427Z"
+            time: '2024-11-26T08:21:00.427Z'
   chlopcy.czat.pech:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YoBUiPLrVMUFgp0pLIetl
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-26T08:39:12.805Z"
+            time: '2024-11-26T08:39:12.805Z'
   chlopcy.czat.nie_zdobyto_osiagow_przedmiot_nie_pomogl:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rvcy0U20bAaZGEU9CbPwr
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-26T13:59:05.338Z"
+            time: '2024-11-26T13:59:05.338Z'
   chlopcy.rzut.masz_komplikacje:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: PjUPdUab84ZYBYrYm7TY0
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-11-27T11:01:12.754Z"
+            time: '2024-11-27T11:01:12.754Z'
   chlopcy.dodatkowy_bonus:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: AyrzSqBgtHtG1JE9-U8kZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-04T21:08:20.201Z"
+            time: '2024-12-04T21:08:20.201Z'
   chlopcy.dialog.dodatkowa_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: UH59RgdNynncng4eiBwJA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-04T21:12:36.289Z"
+            time: '2024-12-04T21:12:36.289Z'
   chlopcy.dialog.naglowek_dodatkowa_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 8aKc05nzgMvfGdJ3opf-Q
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-04T21:16:45.735Z"
+            time: '2024-12-04T21:16:45.735Z'
   chlopcy.czat.wynik_DKM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QylAOouOpibZqc3WHGjse
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-05T21:04:26.271Z"
+            time: '2024-12-05T21:04:26.271Z'
   chlopcy.dialog.przerzut_wielku_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: brxLNvvW8qZ9vUkDjGp-o
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:22:31.846Z"
+            time: '2024-12-06T14:22:31.846Z'
   chlopcy.dialog.pierwsza_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: j5kEPDfZY0IeTlrxDPUcs
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:25:26.052Z"
+            time: '2024-12-06T14:25:26.052Z'
   chlopcy.dialog.druga_KM:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QM553OWPR7WIwdqh5ZKjf
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:25:43.238Z"
+            time: '2024-12-06T14:25:43.238Z'
   chlopcy.dialog.wybierz_KM_do_przerzutu:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dscv4_62ne2fzyZqTDD9O
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:31:11.093Z"
+            time: '2024-12-06T14:31:11.093Z'
   chlopcy.dialog.kliknij_na_kosc_ktora-chcesz-przerzucic:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: lLptYJEoIoV9UinCSOi_b
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-06T14:42:18.359Z"
+            time: '2024-12-06T14:42:18.359Z'
   DB-IB.settings.stashItems:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YQ9HxmKvA60tThNcEg4BU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-19T15:17:33.801Z"
+            time: '2024-12-19T15:17:33.801Z'
   DB-IB.settings.hintStashItems:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: hp5Ru_VfC4wNej55FtSD6
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-19T15:19:14.057Z"
+            time: '2024-12-19T15:19:14.057Z'
   DB-IB.openItemBrowser:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: q8UWaf80Fa8oVEgEf0DUt
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T08:57:26.986Z"
+            time: '2024-12-20T08:57:26.986Z'
   DB-IB.sellItem:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: E7a7kCgbvQvYhTqBffttj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T08:58:04.234Z"
+            time: '2024-12-20T08:58:04.234Z'
   DB-IB.Chat.sellItem:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: uLwViqCW_vBRMznBCQbAX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T10:00:12.194Z"
+            time: '2024-12-20T10:00:12.194Z'
   DB-IB.Chat.increasPrice:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: tjkT4lWrC4-5ANOVm8gwZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:28:51.164Z"
+            time: '2024-12-20T11:28:51.164Z'
   DB-IB.Chat.increasePriceDragon:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 4swaV4qesfMz9gtHPmJ_d
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:31:37.873Z"
+            time: '2024-12-20T11:31:37.873Z'
   DB-IB.Chat.nochangeInPriceSell:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
-            id: "-1sry-URCivV7B63YTwf5"
-            comment: ""
-            suggestion: ""
+              email: ''
+            id: '-1sry-URCivV7B63YTwf5'
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:32:18.782Z"
+            time: '2024-12-20T11:32:18.782Z'
   DB-IB.Chat.sellItemButton:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: na9cY-Jp3AGw02Jjq0CLS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2024-12-20T11:33:27.079Z"
+            time: '2024-12-20T11:33:27.079Z'
   DB-IB.addItemToCharacter:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: B1Tl5F-66MpuKVY_VOKB4
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:50:09.118Z"
+            time: '2025-01-09T13:50:09.118Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 58S4FPt49AUqyi5XLNxSk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:50:28.782Z"
+            time: '2025-01-09T13:50:28.782Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: BtuXrQlYIVBfgjgWSbj3y
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:50:32.448Z"
+            time: '2025-01-09T13:50:32.448Z'
   DB-IB.buyItem:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ixPzZu1MdFj-hXfxnW4-j
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:52:43.870Z"
+            time: '2025-01-09T13:52:43.870Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 5tgcm8FJ9rhL9W2qJERZA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-09T13:52:46.513Z"
+            time: '2025-01-09T13:52:46.513Z'
   DB-IB.stashItem:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ez8FvzHOuvQlkoxr9UFzk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T13:27:32.459Z"
+            time: '2025-01-10T13:27:32.459Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: aBEX1w5n9LpeJ_1PaZfmU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T13:27:56.049Z"
+            time: '2025-01-10T13:27:56.049Z'
   DB-IB.stash:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
-            id: "-EYpm-KeuifAJjH865T7V"
-            comment: ""
-            suggestion: ""
+              email: ''
+            id: '-EYpm-KeuifAJjH865T7V'
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:09:53.698Z"
+            time: '2025-01-10T14:09:53.698Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3IIEipchaGIOO-xpK-x40
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:09:55.925Z"
+            time: '2025-01-10T14:09:55.925Z'
   DB-IB.settings.stash:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 9K2Vwf8U_ApRCxxCppeqT
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:23:12.190Z"
+            time: '2025-01-10T14:23:12.190Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: FnuVHuTV15YQBqOwdMI6F
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:23:16.019Z"
+            time: '2025-01-10T14:23:16.019Z'
   DB-IB.settings.hintStash:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 11mu0omKZ7fZAji1MEIrn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:24:54.727Z"
+            time: '2025-01-10T14:24:54.727Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: XKY9S7tkZ3uX9IRvZjP6k
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-10T14:24:56.956Z"
+            time: '2025-01-10T14:24:56.956Z'
   DB-IB.SellWithoutBarter:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZqEcqRYllzbscvclo8pV9
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T11:24:53.991Z"
+            time: '2025-01-20T11:24:53.991Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: AYwbhog_5chxGG6Kv4o0e
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T11:24:56.055Z"
+            time: '2025-01-20T11:24:56.055Z'
   DB-IB.merchant.setting:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZLrRUCG10lrLF5OBCciDq
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:33:21.172Z"
+            time: '2025-01-20T15:33:21.172Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: BbiMCTK3PMtBzepAK_dG2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:33:23.160Z"
+            time: '2025-01-20T15:33:23.160Z'
   DB-IB.merchant.selling:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: qqX6GGVv4Ugn0UHB3Hmge
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:34:31.208Z"
+            time: '2025-01-20T15:34:31.208Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: U6uR1-JAZ9hdiTH6V82VS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:35:36.461Z"
+            time: '2025-01-20T15:35:36.461Z'
   DB-IB.merchant.buing:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: zlPCKqq8zZC16B4OyYgHM
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-20T15:35:01.044Z"
+            time: '2025-01-20T15:35:01.044Z'
   DB-IB.merchant.setSellingRate:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Dcsf7kAGRzecbEPHBFyzo
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:04:19.306Z"
+            time: '2025-01-21T09:04:19.306Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: cZTrMxtrwmUn7zH19udp5
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:32.187Z"
+            time: '2025-01-21T09:11:32.187Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: PBHVGSLDHVNRy3gwBsS0S
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:04:21.416Z"
+            time: '2025-01-21T09:04:21.416Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: _Sp6SFlwMqFB72BTSe6MW
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:35.422Z"
+            time: '2025-01-21T09:11:35.422Z'
   DB-IB.merchant.setBuingRate:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 4BBuTfIHUQ_Vm80WVAZLk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:06.595Z"
+            time: '2025-01-21T09:11:06.595Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: ZNnH-TMjGfLYQ6APEX9xu
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T09:11:09.026Z"
+            time: '2025-01-21T09:11:09.026Z'
   DB-IB.warrning.incoretInput:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: v-oujoP0lhKoq6rECGSZP
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T13:21:45.882Z"
+            time: '2025-01-21T13:21:45.882Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: L-qlukmb6dzjH6y6k2jZY
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T13:21:58.166Z"
+            time: '2025-01-21T13:21:58.166Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: bW7QQhxxE3PQbOiU6X3OZ
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T13:21:48.030Z"
+            time: '2025-01-21T13:21:48.030Z'
   DB-IB.merchant.allowedSupply:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xKT57iux8so4heEjYWWSX
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:20.735Z"
+            time: '2025-01-21T14:12:20.735Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 8HoE6baYgsKJPHljuS35G
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:33.920Z"
+            time: '2025-01-21T14:12:33.920Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Y60stNFQ_B1oibexTuSQj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:23.572Z"
+            time: '2025-01-21T14:12:23.572Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: RCO1W7xbiN7GYWbLiAGNd
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-21T14:12:53.421Z"
+            time: '2025-01-21T14:12:53.421Z'
   DB-IB.merchant.sells:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: YFsLiLyem4LDo20aPHW6W
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:06:32.518Z"
+            time: '2025-01-22T10:06:32.518Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: N61Wy02izw2f81O2MedhH
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:06:35.162Z"
+            time: '2025-01-22T10:06:35.162Z'
             resolved: true
   DB-IB.itemPrice:
     locales:
@@ -932,401 +932,533 @@ reviews:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rg93Kb1wtPxlMdodzi-rj
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:18:05.238Z"
+            time: '2025-01-22T10:18:05.238Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0gQwwzA04hdN-jKbPhEM1
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:18:08.572Z"
+            time: '2025-01-22T10:18:08.572Z'
   DB-IB.merchant.notAcceptSuply:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xTDnayQzM-PD6d-mduVYU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:47:48.406Z"
+            time: '2025-01-22T10:47:48.406Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: QnJxy-7_0xHKeUNK_wVdi
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T10:47:50.305Z"
+            time: '2025-01-22T10:47:50.305Z'
   DB-IB.warrning.youAreNotOwnerOfDeletedItem:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: K0BnibWg4_c6uHMedH6t-
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T13:03:59.592Z"
+            time: '2025-01-22T13:03:59.592Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: TeFig-YKnrvrbETPuThHF
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T13:04:01.913Z"
+            time: '2025-01-22T13:04:01.913Z'
   DB-IB.Chat.actorSells:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Pm_71JoHOf1TNBn030XSn
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:14:54.994Z"
+            time: '2025-01-22T14:14:54.994Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: LkcnLWIDYWpV4WtY6qFDy
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:15:32.363Z"
+            time: '2025-01-22T14:15:32.363Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: EynvwY6c88RrY1ZoWsGGM
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:17:22.098Z"
+            time: '2025-01-22T14:17:22.098Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: CUxKD-SUhMw0vybF3O0qr
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:15:35.501Z"
+            time: '2025-01-22T14:15:35.501Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: vfAB3rENnf3jqIU8xToHp
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:17:37.179Z"
+            time: '2025-01-22T14:17:37.179Z'
   DB-IB.Chat.and:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 7sSvy_QKUEI0ZRBkou63A
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:46:15.792Z"
+            time: '2025-01-22T14:46:15.792Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: n4FZSuLmB1dsYMLqaBBZk
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T14:46:18.774Z"
+            time: '2025-01-22T14:46:18.774Z'
   DB-IB.dialog.denfieQuantity:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Z1-M6gvZmFzUtNlTWZB2j
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:01:30.437Z"
+            time: '2025-01-22T15:01:30.437Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rrpC2_-tIAuzgXmpatEU2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:01:33.119Z"
+            time: '2025-01-22T15:01:33.119Z'
   DB-IB.dialog.selectSellingQuantity:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: JTbnG5ShWsqLztnvGR3L0
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:07:58.637Z"
+            time: '2025-01-22T15:07:58.637Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: VwnEJqHrP9U47k7FdgXk2
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-01-22T15:08:01.709Z"
+            time: '2025-01-22T15:08:01.709Z'
   DB-IB.merchant.nonGMaddItemsToSell:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: HXbAe26Y0FaV7STc9NfEr
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-02-25T12:56:03.723Z"
+            time: '2025-02-25T12:56:03.723Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 6T6UFTc1mSefBUixosMNA
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-02-25T12:56:09.747Z"
+            time: '2025-02-25T12:56:09.747Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OdsEzo_g9myJCWZKXtftU
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-02-25T12:56:12.489Z"
+            time: '2025-02-25T12:56:12.489Z'
   DB-IB.warrning.merchantDoNotHaveMoreItem:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 7EX7TW-iyQgDoI2V7T38G
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:45:48.714Z"
+            time: '2025-03-31T07:45:48.714Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: bGOcHuykCL3-PanHPnDxV
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:45:51.408Z"
+            time: '2025-03-31T07:45:51.408Z'
   DB-IB.dialog.selectActor:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: HmGix8qdxdAlpBB9kbZom
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:48:27.666Z"
+            time: '2025-03-31T07:48:27.666Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: raB3hJ-NkNiidZTZxt9Sh
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:48:30.473Z"
+            time: '2025-03-31T07:48:30.473Z'
   DB-IB.dialog.buy:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: GylPUwKp55Ii610DbXh8K
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:49:03.715Z"
+            time: '2025-03-31T07:49:03.715Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: yx3KTinVgZt8vHoVJ33mg
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:49:06.687Z"
+            time: '2025-03-31T07:49:06.687Z'
   DB-IB.dialog.sell:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: pj8JlUoYk5kxZUQIktuN7
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:50:56.099Z"
+            time: '2025-03-31T07:50:56.099Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 0UkQaDjlPh76-b55Bwb-v
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T07:50:58.323Z"
+            time: '2025-03-31T07:50:58.323Z'
   DB-IB.warrning.youDoNotSellAnything:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: OwQO51FK544slt3LBjjLC
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T12:54:25.070Z"
+            time: '2025-03-31T12:54:25.070Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: xiJBS4PAdRq6xU4rhKpKg
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-03-31T12:54:28.238Z"
+            time: '2025-03-31T12:54:28.238Z'
   DB-IB.dialog.openMerchantSheet:
     locales:
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: w3k9sDpeq_8EQi_NIa3Ra
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:25:07.571Z"
+            time: '2025-05-16T12:25:07.571Z'
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: 3pcv6mJWmZLvppgRkLW2P
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:25:10.039Z"
+            time: '2025-05-16T12:25:10.039Z'
   DB-IB.dialog.youAttempToOpenMerchantSheet:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: DK9c3PtFj1u53V_CPsQK7
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:28:58.933Z"
+            time: '2025-05-16T12:28:58.933Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: dw5IKEOkysysFjUedDKZS
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-05-16T12:29:01.306Z"
+            time: '2025-05-16T12:29:01.306Z'
   DB-IB.title:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: Zl113zn9Uh379rsIPlO6k
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-06-27T10:50:57.390Z"
+            time: '2025-06-27T10:50:57.390Z'
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: hCZn5CDkpRYO-21n1T16s
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-06-27T10:51:02.739Z"
+            time: '2025-06-27T10:51:02.739Z'
       pl:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: rT_nTaf32zIPeBo7Pz83E
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-06-27T10:51:25.369Z"
+            time: '2025-06-27T10:51:25.369Z'
   JT.JURNAL.ThemeTooltip:
     locales:
       en:
         comments:
           - user:
               name: Unknown
-              email: ""
+              email: ''
             id: E-VXN4vWgClNEPOi8X2Uz
-            comment: ""
-            suggestion: ""
+            comment: ''
+            suggestion: ''
             type: approve
-            time: "2025-10-24T07:22:37.528Z"
+            time: '2025-10-24T07:22:37.528Z'
+  JT.JOURNAL.SelectYourTheme:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: _4ontMLjZGGbkUCIbuMCe
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:09:50.244Z'
+  JT.THEME.journalTheme:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: CaRHRZzSxWB7aB0pIwNV9
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:10:05.566Z'
+  JT.THEME.journalHeaderFont:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 8CUqdzORonuciTltVNoPH
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:10:17.845Z'
+  JT.THEME.journalBodyFont:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: xW6LSAvKaO8dYo4s11um1
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:10:34.181Z'
+  JT.APPLY:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: t6TZ1LxXRoBhoiaKTwBFv
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:10:48.244Z'
+  JT.SETTING.MinOwnership:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: OxwhbapHQ_HXKie6waudQ
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:19:16.856Z'
+  JT.SETTING.MinOwnershipHint:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 5ESoGCvQ5ZDNlr5sNSNYV
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:20:20.904Z'
+  JT.MENU.ThemeConfig:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: N5lQf6BRnx1XYWJ9yrFne
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:21:23.111Z'
+  JT.MENU.OpenDialog:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: R0lsjH-2F3S0jYlDavork
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:21:44.488Z'
+  JT.MENU.ThemeConfigHint:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 79VNmE7VM__Pam7rFNd5l
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:22:33.633Z'
+  JT.JURNAL.title:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: AWU6v6XJmOh3XNrm1CvFR
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-10-24T08:23:23.882Z'
