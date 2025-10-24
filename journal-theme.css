@@ -69,8 +69,8 @@
 }
 /* Root form/window sizing & stacking (extracted from inline style)
    If you want this responsive, change/override accordingly. */
-.application.sheet.journal-sheet.journal-entry.green {
-    background: url("assets/theme/darkgreennoise.webp");
+.application.sheet.journal-sheet.journal-entry.emeraldcity {
+    background: url("assets/theme/darkemeraldcitynoise.webp");
     background-repeat: repeat;
     background-size: auto;
     
@@ -80,12 +80,12 @@
    and use max-width/max-height instead. */
 
 /* Title input styling (scoped) */
-.journal-entry.green .journal-header .title {
+.journal-entry.emeraldcity .journal-header .title {
     background: rgba(128, 164, 128, 0.8);
 }
 
 /* Header window title (extracted inline h1 styles) */
-.journal-entry.green header.window-header .window-title {
+.journal-entry.emeraldcity header.window-header .window-title {
     font-family: "Big Noodle Titling", sans-serif;
     /* "x-large" mapped to explicit size for consistency */
     font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
@@ -94,20 +94,20 @@
 }
 
 /* Sidebar (border extracted) */
-.journal-entry.green .journal-sidebar {
+.journal-entry.emeraldcity .journal-sidebar {
     border: solid 1px #001600;
 }
 
 /* Content area border (extracted) */
-.journal-entry.green .journal-entry-content {
+.journal-entry.emeraldcity .journal-entry-content {
     border: solid 1px #001600;
-    background: url("assets/theme/darkgreennoise.webp");
+    background: url("assets/theme/darkemeraldcitynoise.webp");
     background-repeat: repeat;
     background-size: auto;
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.green .journal-entry-page {
+.journal-entry.emeraldcity .journal-entry-page {
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -124,56 +124,56 @@
 }
 
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
-.journal-entry.green .journal-sidebar .toc .page-heading,
-.journal-entry.green .journal-sidebar .toc .h1 .heading-link {
+.journal-entry.emeraldcity .journal-sidebar .toc .page-heading,
+.journal-entry.emeraldcity .journal-sidebar .toc .h1 .heading-link {
     font-family: "Big Noodle Titling", sans-serif;
     font-size: 1.5em;
 }
 
 /* Smaller heading sizes in TOC */
-.journal-entry.green .journal-sidebar .toc .h2 .heading-link {
+.journal-entry.emeraldcity .journal-sidebar .toc .h2 .heading-link {
     font-family: "Big Noodle Titling", sans-serif;
     font-size: 1.25em;
 }
 
-.journal-entry.green .journal-sidebar .toc .h3 .heading-link,
-.journal-entry.green .content-link,
-.journal-entry.green .inline-roll {
+.journal-entry.emeraldcity .journal-sidebar .toc .h3 .heading-link,
+.journal-entry.emeraldcity .content-link,
+.journal-entry.emeraldcity .inline-roll {
     font-family: "Big Noodle Titling", sans-serif;
     font-size: 1.25em;
 }
 
 /* Window app header h4 color (fixed syntax - no quotes around color) */
-.journal-entry.green .window-app header.window-header h4 {
+.journal-entry.emeraldcity .window-app header.window-header h4 {
     color: "#eoffeo"; /* keep as hex; make sure this is valid color */
 }
 
 /* Links and inline rolls color */
-.journal-entry.green .content-link,
-.journal-entry.green .inline-roll {
+.journal-entry.emeraldcity .content-link,
+.journal-entry.emeraldcity .inline-roll {
     color: white;
 }
 
-/* Small niceties: ensure button icons contrast on green header */
-.journal-entry.green header.window-header .header-control {
+/* Small niceties: ensure button icons contrast on emeraldcity header */
+.journal-entry.emeraldcity header.window-header .header-control {
     color: #f8fff8;
 }
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
-.journal-entry.green .journal-entry-pages {
+.journal-entry.emeraldcity .journal-entry-pages {
     background: rgba(0, 10, 0, 0.25);
     backdrop-filter: blur(0.5px);
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
-.application.sheet.journal-sheet.journal-entry.green.expanded {
+.application.sheet.journal-sheet.journal-entry.emeraldcity.expanded {
     /* Example: slightly larger box-shadow */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
 /* Responsive suggestions (optional) */
 @media (max-width: 1100px) {
-    .application.sheet.journal-sheet.journal-entry.green {
+    .application.sheet.journal-sheet.journal-entry.emeraldcity {
         width: 95%;
         left: 2.5%;
         top: 40px;

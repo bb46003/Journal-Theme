@@ -3,7 +3,7 @@
     "THEME": {
       "label": "Select your character sheet theme",
       "default": "System default",
-      "emeralcity": "Emerald City",
+      "emeraldcity": "Emerald City",
       "freedomcity": "Freedom City",
       "techblue": "Tech Blue",
       "techblue2": "Tech Blue 2",

@@ -2,7 +2,7 @@ export const JT = {};
 
 JT.sheetTheme = {
   default: "JT.THEME.default",
-  green: "JT.THEME.green",
+  emeraldcity: "JT.THEME.emeraldcity",
   freedomcity: "JT.THEME.freedomcity",
   techblue: "JT.THEME.techblue",
   techblue2: "JT.THEME.techblue2",
