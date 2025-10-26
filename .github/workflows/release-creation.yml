@@ -38,7 +38,7 @@ jobs:
       - name: Create Module Archive
         run: |
           zip --recurse-paths ./module.zip \
-           config.mjs journal-theme.css jourmal-theme.hbs journal-theme-dialog.mjs main.mjs module.json lang/ assets/
+           config.mjs journal-theme.css jourmal-theme.hbs journal-theme-dialog.mjs main.mjs module.json socketHandler.mjs lang/ assets/
 
       # Debug step: list contents of the zip file
       - name: Show module.zip contents
