@@ -1,9 +1,10 @@
 import { JT } from "./config.mjs";
 import { JournalThemeDialog } from "./journal-theme-dialog.mjs";
+import { SocketHandler } from "./socketHandler.mjs";
 
 Hooks.once("init", async function () {
   CONFIG.JT = JT;
-  game.settings.register("journal-theme", "minOwnershipLevel", {
+  game.settings.register("journal-styler", "minOwnershipLevel", {
     name: "JT.SETTING.MinOwnership", // left-hand label
     hint: "JT.SETTING.MinOwnershipHint", // subtext hint
     scope: "world", // global for all users
@@ -17,7 +18,7 @@ Hooks.once("init", async function () {
     default: 3, // default = Owner
   });
   // Register the stored default theme for GM
-  game.settings.register("journal-theme", "GMdefoultTheme", {
+  game.settings.register("journal-styler", "GMdefoultTheme", {
     scope: "world",
     config: false,
     default: {},
@@ -25,7 +26,7 @@ Hooks.once("init", async function () {
   });
 
   // Register menu entry (button) in the Settings UI
-  game.settings.registerMenu("journal-theme", "themeMenu", {
+  game.settings.registerMenu("journal-styler", "themeMenu", {
     name: "JT.MENU.ThemeConfig", // shown as the left label
     label: "JT.MENU.OpenDialog", // the button text
     hint: "JT.MENU.ThemeConfigHint", // subtext hint
@@ -33,6 +34,9 @@ Hooks.once("init", async function () {
     type: JournalThemeDialog, // this is your dialog class
     restricted: true, // true = GM only, false = everyone
   });
+  registerHandlebarsHelpers();
+  const myPackage = game.modules.get("journal-styler"); // or just game.system if you're a system
+  myPackage.socketHandler = new SocketHandler();
 });
 
 Hooks.on("renderJournalEntrySheet", (html) => {
@@ -47,11 +51,11 @@ Hooks.on("renderJournalEntrySheet", (html) => {
   }
   const userID = game.user.id;
   const ownerShipSettings = game.settings.get(
-    "journal-theme",
+    "journal-styler",
     "minOwnershipLevel",
   );
   const journalOwnerShip = html.document.ownership[userID];
-  if (ownerShipSettings === journalOwnerShip) {
+  if (ownerShipSettings <= journalOwnerShip) {
     const header = element.querySelector(".window-header");
     const bbuttenexist = element.querySelector(
       ".header-control.icon.fa-solid.fa-palette",
@@ -71,7 +75,7 @@ Hooks.on("renderJournalEntrySheet", (html) => {
       });
     }
   }
-  const gmDefault = game.settings.get("journal-theme", "GMdefoultTheme") || {};
+  const gmDefault = game.settings.get("journal-styler", "GMdefoultTheme") || {};
   const jtFlags = html.document?.flags?.JT || {};
   const flags = jtFlags[userID] ?? jtFlags["default"] ?? {};
   const flagTheme = flags.theme ?? gmDefault.theme;
@@ -98,7 +102,7 @@ Hooks.on("renderJournalEntrySheet", (html) => {
   }
   if (flagHeaderFont !== undefined) {
     const elements = element.querySelectorAll(
-      ".window-title, .title, .sidebar.journal-sidebar.flexcol, .page-heading, .journal-page-header h1",
+      `.window-title, .title, .sidebar.journal-sidebar.flexcol, .page-heading, .journal-page-header h1, text level1 page active, [data-anchor^="header-"],.heading-link, .heading `,
     );
     elements.forEach((element) => {
       if (flagHeaderFont !== "") {
@@ -115,3 +119,19 @@ Hooks.on("renderJournalEntrySheet", (html) => {
     element.className = `application sheet journal-sheet journal-entry expanded ${flagTheme}`;
   }
 });
+function registerHandlebarsHelpers() {
+  Handlebars.registerHelper({
+    eq: (v1, v2) => v1 === v2,
+    ne: (v1, v2) => v1 !== v2,
+    lt: (v1, v2) => v1 < v2,
+    gt: (v1, v2) => v1 > v2,
+    lte: (v1, v2) => v1 <= v2,
+    gte: (v1, v2) => v1 >= v2,
+    and() {
+      return Array.prototype.every.call(arguments, Boolean);
+    },
+    or() {
+      return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
+    },
+  });
+}

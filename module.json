@@ -1,5 +1,5 @@
 {
-  "id": "journal-theme",
+  "id": "journal-styler",
   "title": "Journal Styler",
   "version": "vDev",
 
@@ -30,6 +30,7 @@
       "path": "lang/pl.json"
     }
   ],
+  "socket": true,
   "url": "Filled in by the release workflow",
   "manifest": "Filled in by the release workflow",
   "download": "Filled in by the release workflow"

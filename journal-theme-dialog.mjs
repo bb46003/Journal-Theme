@@ -8,7 +8,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
       height: "auto",
     },
     template:
-      "modules/journal-theme/jourmal-theme.hbs",
+      "modules/journal-styler/jourmal-theme.hbs",
     window: { title: "JT.JURNAL.title" },
   };
 
@@ -32,9 +32,13 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     const userID = game.user.id;
     const journalUuid = this.options.uuid;
     const journalEntry = await fromUuid(journalUuid);
-    const headerFont = CONFIG.JT.JurnalHeaderFont;
+    let ownership = journalEntry?.ownership[userID];
+    if(ownership === undefined && game.user.isGM){
+      ownership = 3;  
+    }
+    const headerFont = CONFIG.JT.JournalHeaderFont;
     const gmDefault =
-      game.settings.get("journal-theme", "GMdefoultTheme") || {};
+      game.settings.get("journal-styler", "GMdefoultTheme") || {};
     const jtFlags = journalEntry?.flags?.JT || {};
     const flags = jtFlags[userID] ?? jtFlags["default"] ?? {};
     const flagTheme = flags.theme ?? gmDefault.theme;
@@ -47,6 +51,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
       selectedTheme: flagTheme,
       selectedHederFont: flagHeaderFont,
       selectedBodyFont: flagBodyFont, // body fonts
+      ownership: ownership
     };
 
     let html;
@@ -85,14 +90,23 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
         updateData[`flags.JT.${userID}.${key}`] = value;
       });
       if (Object.keys(updateData).length > 0) {
-        await journalEntry.update(updateData);
+        if(journalEntry.ownership[userID] < 3){
+          game.modules.get("journal-styler").socketHandler.emit({
+            type: "setFlag",
+            journalUuid: journalUuid,
+            updateData: updateData
+          });
+
+        }else{
+          await journalEntry.update(updateData);
+        }
       }
     } else {
       if (Object.keys(newValues).length > 0) {
         const currentDefaults =
-          game.settings.get("journal-theme", "GMdefoultTheme") || {};
+          game.settings.get("journal-styler", "GMdefoultTheme") || {};
         const merged = { ...currentDefaults, ...newValues };
-        await game.settings.set("journal-theme", "GMdefoultTheme", merged);
+        await game.settings.set("journal-styler", "GMdefoultTheme", merged);
       }
     }
   }

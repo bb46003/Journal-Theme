@@ -1,12 +1,13 @@
 <div>
   <label>{{localize "JT.JOURNAL.SelectYourTheme"}}</label>
   <div>
+   
     <label>{{localize "JT.THEME.journalTheme"}}</label>
-    {{log selectedTheme}}
     <select id="theme">
       {{selectOptions listtheme selected=selectedTheme localize=true}}
     </select>
   </div>
+   {{#if (eq ownership 3)}}
   <div>
     <label>{{localize "JT.THEME.journalHeaderFont"}}</label>
     <select id="headerFont">
@@ -21,5 +22,6 @@
       {{selectOptions textFont selected=selectedBodyFont localize=true}}
     </select>
   </div>
+  {{/if}}
   <button data-action="applyTheme">{{localize "JT.APPLY"}}</button>
 </div>

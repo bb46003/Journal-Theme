@@ -1,72 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amarante&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aubrey&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskerville+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Blinker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bokor&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Butcherman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Doto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Eater&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Federo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handjet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homenaje+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kings&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=NTR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelfy+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plaster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quantico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Revalia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quantico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
-
-/* New fonts below */
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Eater&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Butcherman&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Underdog&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarpanch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sancreek&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Underdog&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arsenal+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap");
-
-@font-face {
-  font-family: "Big Noodle Titling";
-  src: url("assets/font/big_noodle_titling.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volikorn+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
 /* Root form/window sizing & stacking (extracted from inline style)
    If you want this responsive, change/override accordingly. */
 .application.sheet.journal-sheet.journal-entry.emeraldcity {
@@ -96,6 +144,7 @@
 /* Sidebar (border extracted) */
 .journal-entry.emeraldcity .journal-sidebar {
     border: solid 1px #001600;
+  
 }
 
 /* Content area border (extracted) */
@@ -107,7 +156,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.emeraldcity .journal-entry-page {
+.journal-entry.emeraldcity .journal-entry-page .journal-page-content h1,
+.journal-entry.emeraldcity .journal-entry-page .journal-page-content h2,
+.journal-entry.emeraldcity .journal-entry-page .journal-page-content h3,
+.journal-entry.emeraldcity .journal-entry-page .journal-page-content h4,
+.journal-entry.emeraldcity .journal-entry-page .journal-page-content h5,
+.journal-entry.emeraldcity .journal-entry-page .journal-page-content h6 {
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -219,7 +273,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.freedomcity .journal-entry-page {
+.journal-entry.freedomcity .journal-entry-page .journal-page-content h1,
+.journal-entry.freedomcity .journal-entry-page .journal-page-content h2,
+.journal-entry.freedomcity .journal-entry-page .journal-page-content h3,
+.journal-entry.freedomcity .journal-entry-page .journal-page-content h4,
+.journal-entry.freedomcity .journal-entry-page .journal-page-content h5,
+.journal-entry.freedomcity .journal-entry-page .journal-page-content h6{
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -331,7 +390,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.techblue .journal-entry-page {
+.journal-entry.techblue .journal-entry-page .journal-page-content h1,
+.journal-entry.techblue .journal-entry-page .journal-page-content h2,
+.journal-entry.techblue .journal-entry-page .journal-page-content h3,
+.journal-entry.techblue .journal-entry-page .journal-page-content h4,
+.journal-entry.techblue .journal-entry-page .journal-page-content h5,
+.journal-entry.techblue .journal-entry-page .journal-page-content h6 {
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -443,7 +507,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.techblue2 .journal-entry-page {
+.journal-entry.techblue2 .journal-entry-page .journal-page-content h1,
+.journal-entry.techblue2 .journal-entry-page .journal-page-content h2,
+.journal-entry.techblue2 .journal-entry-page .journal-page-content h3,
+.journal-entry.techblue2 .journal-entry-page .journal-page-content h4,
+.journal-entry.techblue2 .journal-entry-page .journal-page-content h5,
+.journal-entry.techblue2 .journal-entry-page .journal-page-content h6{
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -555,7 +624,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.bloodred .journal-entry-page {
+.journal-entry.bloodred .journal-entry-page .journal-page-content h1,
+.journal-entry.bloodred .journal-entry-page .journal-page-content h2,
+.journal-entry.bloodred .journal-entry-page .journal-page-content h3,
+.journal-entry.bloodred .journal-entry-page .journal-page-content h4,
+.journal-entry.bloodred .journal-entry-page .journal-page-content h5,
+.journal-entry.bloodred .journal-entry-page .journal-page-content h6 {
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -667,7 +741,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.bloodred2 .journal-entry-page {
+.journal-entry.bloodred2 .journal-entry-page .journal-page-content h1,
+.journal-entry.bloodred2 .journal-entry-page .journal-page-content h2,
+.journal-entry.bloodred2 .journal-entry-page .journal-page-content h3,
+.journal-entry.bloodred2 .journal-entry-page .journal-page-content h4,
+.journal-entry.bloodred2 .journal-entry-page .journal-page-content h5,
+.journal-entry.bloodred2 .journal-entry-page .journal-page-content h6{
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -779,7 +858,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.gothblack .journal-entry-page {
+.journal-entry.gothblack .journal-entry-page .journal-page-content h1,
+.journal-entry.gothblack .journal-entry-page .journal-page-content h2,
+.journal-entry.gothblack .journal-entry-page .journal-page-content h3,
+.journal-entry.gothblack .journal-entry-page .journal-page-content h4,
+.journal-entry.gothblack .journal-entry-page .journal-page-content h5,
+.journal-entry.gothblack .journal-entry-page .journal-page-content h6{
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -891,7 +975,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.cosmicblue .journal-entry-page {
+.journal-entry.cosmicblue .journal-entry-page .journal-page-content h1,
+.journal-entry.cosmicblue .journal-entry-page .journal-page-content h2,
+.journal-entry.cosmicblue .journal-entry-page .journal-page-content h3,
+.journal-entry.cosmicblue .journal-entry-page .journal-page-content h4,
+.journal-entry.cosmicblue .journal-entry-page .journal-page-content h5,
+.journal-entry.cosmicblue .journal-entry-page .journal-page-content h6{
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -1003,7 +1092,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.starburst .journal-entry-page {
+.journal-entry.starburst .journal-entry-page .journal-page-content h1,
+.journal-entry.starburst .journal-entry-page .journal-page-content h2,
+.journal-entry.starburst .journal-entry-page .journal-page-content h3,
+.journal-entry.starburst .journal-entry-page .journal-page-content h4,
+.journal-entry.starburst .journal-entry-page .journal-page-content h5,
+.journal-entry.starburst .journal-entry-page .journal-page-content h6 {
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -1086,7 +1180,9 @@
 
 /* If you prefer the window to behave responsively, remove width/height
    and use max-width/max-height instead. */
-
+.journal-entry.matrixblack input[type=text] {
+    color: smokewhite;
+}
 /* Title input styling (scoped) */
 .journal-entry.matrixblack .journal-header .title {
     background: rgba(128, 164, 128, 0.8);
@@ -1104,6 +1200,7 @@
 /* Sidebar (border extracted) */
 .journal-entry.matrixblack .journal-sidebar {
     border: solid 1px #001600;
+    background: rgba(0, 16, 0, 0.15);
 }
 
 /* Content area border (extracted) */
@@ -1115,7 +1212,12 @@
 }
 
 /* Font variable definitions for page content (keeps original intent) */
-.journal-entry.matrixblack .journal-entry-page {
+.journal-entry.matrixblack .journal-entry-page .journal-page-content h1,
+.journal-entry.matrixblack .journal-entry-page .journal-page-content h2,
+.journal-entry.matrixblack .journal-entry-page .journal-page-content h3,
+.journal-entry.matrixblack .journal-entry-page .journal-page-content h4,
+.journal-entry.matrixblack .journal-entry-page .journal-page-content h5,
+.journal-entry.matrixblack .journal-entry-page .journal-page-content h6 {
     --headerFont: "Big Noodle Titling";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
@@ -1169,8 +1271,28 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.matrixblack .journal-entry-pages {
-    background: rgba(0, 10, 0, 0.25);
+    background: rgba(0, 16, 0, 0.15);
     backdrop-filter: blur(0.5px);
+}   
+.journal-entry.matrixblack .journal-entry-content {
+    border: solid 1px #000000;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(assets/theme/blackmatrix.webp);
+    background-repeat: repeat;
+    background-size: 20%;
+    background-color: black;
+}
+
+.journal-entry.matrixblack input[type=text] {
+    color: smokewhite;
+}
+
+.journal-entry.matrixblack .journal-header .title {
+    background: rgba(0, 0, 0, 0.5);
+    height: 30px;
+    border-color: ghostwhite;
+    border-radius: 10px;
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
