@@ -384,13 +384,18 @@
    and use max-width/max-height instead. */
 
 /* Title input styling (scoped) */
+
 .journal-entry.techblue .journal-header .title {
-    background: rgba(128, 164, 128, 0.8);
+    background: linear-gradient(rgba(0, 0, 32, 1), rgba(0, 0, 128, .5));
+    border: solid 3px #8181ff;
+    height: 30px;
+    border-radius: 25px;
+    color: white;
 }
 
 /* Header window title (extracted inline h1 styles) */
 .journal-entry.techblue header.window-header .window-title {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Goldman", sans-serif;
     /* "x-large" mapped to explicit size for consistency */
     font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
     margin: 0;
@@ -398,18 +403,26 @@
 }
 
 /* Sidebar (border extracted) */
+
 .journal-entry.techblue .journal-sidebar {
-    border: solid 1px #001600;
+    border: solid 3px #8181ff;
+    border-radius: 25px;
+    background: linear-gradient(rgba(0, 0, 128, 1), rgba(0, 0, 32, 1)), linear-gradient(rgba(0, 0, 32, 0.25), rgba(0, 0, 0, 0.5)), url(assets/theme/darkbluenoise.webp);
 }
+
 
 /* Content area border (extracted) */
 .journal-entry.techblue .journal-entry-content {
-    border: solid 1px #001600;
-    background: url("assets/theme/darkbluenoise.webp");
+    border: solid 3px #8181ff;
+    border-radius: 25px;
+    background: linear-gradient(rgba(0, 0, 96, 0.75), rgba(0, 0, 32, 0.5)), url(assets/Fond_Files/fond_cubic.webp), linear-gradient(rgba(0, 0, 32, 0.25), rgba(0, 0, 0, 0.5)), url(assets/theme/darkbluenoise.webp);
     background-repeat: repeat;
     background-size: auto;
+    margin: 5px;
 }
-
+.journal-entry.techblue input[type=text] {
+    color: white;
+}
 /* Font variable definitions for page content (keeps original intent) */
 .journal-entry.techblue .journal-entry-page .journal-page-content h1,
 .journal-entry.techblue .journal-entry-page .journal-page-content h2,
@@ -417,7 +430,7 @@
 .journal-entry.techblue .journal-entry-page .journal-page-content h4,
 .journal-entry.techblue .journal-entry-page .journal-page-content h5,
 .journal-entry.techblue .journal-entry-page .journal-page-content h6 {
-    --headerFont: "Big Noodle Titling";
+    --headerFont: "Goldman";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
     --font-h3: var(--headerFont);
@@ -435,20 +448,20 @@
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
 .journal-entry.techblue .journal-sidebar .toc .page-heading,
 .journal-entry.techblue .journal-sidebar .toc .h1 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Goldman", sans-serif;
     font-size: 1.5em;
 }
 
 /* Smaller heading sizes in TOC */
 .journal-entry.techblue .journal-sidebar .toc .h2 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Goldman", sans-serif;
     font-size: 1.25em;
 }
 
 .journal-entry.techblue .journal-sidebar .toc .h3 .heading-link,
 .journal-entry.techblue .content-link,
 .journal-entry.techblue .inline-roll {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Goldman", sans-serif;
     font-size: 1.25em;
 }
 
@@ -470,9 +483,10 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.techblue .journal-entry-pages {
-    background: rgba(0, 10, 0, 0.25);
+    background: rgb(0 0 43 / 23%);
     backdrop-filter: blur(0.5px);
-}
+    font-family: "Russo One";
+}   
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
 .application.sheet.journal-sheet.journal-entry.techblue.expanded {
@@ -589,6 +603,7 @@
 .journal-entry.techblue2 .journal-entry-pages {
     background: rgba(0, 10, 0, 0.25);
     backdrop-filter: blur(0.5px);
+    font-family: "Russo One";
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
@@ -852,13 +867,18 @@
    and use max-width/max-height instead. */
 
 /* Title input styling (scoped) */
-.journal-entry.gothblack .journal-header .title {
-    background: rgba(0, 0, 0, 1);
+
+.journal-entry.gothblack header.window-header .window-title {
+    font-family: "Tektur", sans-serif;
+    letter-spacing: .3em;
+    background: none;
+    text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
+    text-decoration-thickness: 50px;
 }
 
 /* Header window title (extracted inline h1 styles) */
 .journal-entry.gothblack header.window-header .window-title {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Tektur", sans-serif;
     /* "x-large" mapped to explicit size for consistency */
     font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
     margin: 0;
@@ -868,15 +888,29 @@
 /* Sidebar (border extracted) */
 .journal-entry.gothblack .journal-sidebar {
     border: solid 1px #001600;
+    text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
+}
+
+.journal-entry.gothblack input[type=text] {
+    color: white;
+    text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
+}
+.journal-entry.gothblack .journal-header .title {
+    letter-spacing: .3em;
+    background: none;
+    text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
+    text-decoration-thickness: 50px;
 }
 
 /* Content area border (extracted) */
 .journal-entry.gothblack .journal-entry-content {
     border: solid 1px #001600;
-    background: url("assets/theme/blacknoise.webp");
+    background: url(assets/theme/blacknoise.webp);
     background-repeat: repeat;
     background-size: auto;
+    text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
 }
+
 
 /* Font variable definitions for page content (keeps original intent) */
 .journal-entry.gothblack .journal-entry-page .journal-page-content h1,
@@ -885,7 +919,7 @@
 .journal-entry.gothblack .journal-entry-page .journal-page-content h4,
 .journal-entry.gothblack .journal-entry-page .journal-page-content h5,
 .journal-entry.gothblack .journal-entry-page .journal-page-content h6{
-    --headerFont: "Big Noodle Titling";
+    --headerFont: "Tektur";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
     --font-h3: var(--headerFont);
@@ -901,22 +935,23 @@
 }
 
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
-.journal-entry.gothblack .journal-sidebar .toc .page-heading,
+.journal-entry.gothblack .journal-sidebar .toc .page-heading, 
 .journal-entry.gothblack .journal-sidebar .toc .h1 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Tektur", sans-serif;
     font-size: 1.5em;
+    text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
 }
 
 /* Smaller heading sizes in TOC */
 .journal-entry.gothblack .journal-sidebar .toc .h2 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Tektur", sans-serif;
     font-size: 1.25em;
 }
 
 .journal-entry.gothblack .journal-sidebar .toc .h3 .heading-link,
 .journal-entry.gothblack .content-link,
 .journal-entry.gothblack .inline-roll {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Tektur", sans-serif;
     font-size: 1.25em;
 }
 
@@ -940,6 +975,7 @@
 .journal-entry.gothblack .journal-entry-pages {
     background: rgba(0, 10, 0, 0.25);
     backdrop-filter: blur(0.5px);
+    font-family: "Goldman"
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
@@ -959,10 +995,8 @@
     }
 }
 .application.sheet.journal-sheet.journal-entry.cosmicblue {
-    background: url("assets/theme/darkbluenoise.webp");
-    background-repeat: repeat;
-    background-size: auto;
-    
+    background: linear-gradient(rgba(0, 0, 16, 0.35), rgba(0, 0, 0, 0.25)), url(assets/Fond_Files/fond_cosmic1.webp), linear-gradient(rgba(0, 0, 32, 0.25), rgba(0, 0, 0, 0.5)), url(assets/theme/darkerbluenoise.webp);
+    background-size: auto, auto, auto, auto, auto, auto;
 }
 
 /* If you prefer the window to behave responsively, remove width/height
@@ -970,29 +1004,39 @@
 
 /* Title input styling (scoped) */
 .journal-entry.cosmicblue .journal-header .title {
-    background: rgba(128, 164, 128, 0.8);
+    
+    font-family: "Tektur", sans-serif;
+    background: none;
+    height: 30px;
+    text-shadow: 0 0 5px #ffffff;
+    color: white;
+
 }
 
 /* Header window title (extracted inline h1 styles) */
 .journal-entry.cosmicblue header.window-header .window-title {
-    font-family: "Big Noodle Titling", sans-serif;
-    /* "x-large" mapped to explicit size for consistency */
-    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    font-family: "Tektur", sans-serif;
+    font-size: 1.25rem;
     margin: 0;
     line-height: 1;
+    text-shadow: 0 0 5px #ffffff;
 }
 
 /* Sidebar (border extracted) */
 .journal-entry.cosmicblue .journal-sidebar {
     border: solid 1px #001600;
+    color: white;
+    text-shadow: 0 0 5px #ffffff;
+    backdrop-filter: blur(4px);
 }
-
+.journal-entry.cosmicblue input[type=text] {
+    color: white;
+}
 /* Content area border (extracted) */
 .journal-entry.cosmicblue .journal-entry-content {
     border: solid 1px #001600;
-    background: url("assets/theme/darkbluenoise.webp");
-    background-repeat: repeat;
-    background-size: auto;
+    background: none;
+    backdrop-filter: blur(5px);
 }
 
 /* Font variable definitions for page content (keeps original intent) */
@@ -1002,7 +1046,7 @@
 .journal-entry.cosmicblue .journal-entry-page .journal-page-content h4,
 .journal-entry.cosmicblue .journal-entry-page .journal-page-content h5,
 .journal-entry.cosmicblue .journal-entry-page .journal-page-content h6{
-    --headerFont: "Big Noodle Titling";
+    --headerFont: "Tektur";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
     --font-h3: var(--headerFont);
@@ -1020,20 +1064,20 @@
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
 .journal-entry.cosmicblue .journal-sidebar .toc .page-heading,
 .journal-entry.cosmicblue .journal-sidebar .toc .h1 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Tektur", sans-serif;
     font-size: 1.5em;
 }
 
 /* Smaller heading sizes in TOC */
 .journal-entry.cosmicblue .journal-sidebar .toc .h2 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Tektur", sans-serif;
     font-size: 1.25em;
 }
 
 .journal-entry.cosmicblue .journal-sidebar .toc .h3 .heading-link,
 .journal-entry.cosmicblue .content-link,
 .journal-entry.cosmicblue .inline-roll {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Tektur", sans-serif;
     font-size: 1.25em;
 }
 
@@ -1055,9 +1099,10 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.cosmicblue .journal-entry-pages {
-    background: rgba(0, 10, 0, 0.25);
+    background: rgba(128, 164, 128, 0.8);
     backdrop-filter: blur(0.5px);
-}
+    font-family: "Goldman";
+}   
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
 .application.sheet.journal-sheet.journal-entry.cosmicblue.expanded {
@@ -1210,26 +1255,33 @@
 }
 
 /* Header window title (extracted inline h1 styles) */
-.journal-entry.matrixblack header.window-header .window-title {
-    font-family: "Big Noodle Titling", sans-serif;
-    /* "x-large" mapped to explicit size for consistency */
-    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
-    margin: 0;
-    line-height: 1;
+.journal-entry.matrixblack .journal-header .title {
+    background: rgba(0, 0, 0, 0.5);
+    height: 30px;
+    border-color: ghostwhite;
+    border-radius: 10px;
+    margin: 5px;
+    text-shadow: 0 0 5px #81ff81;
+    box-shadow: 0 0 2px #81ff81;
 }
 
 /* Sidebar (border extracted) */
 .journal-entry.matrixblack .journal-sidebar {
     border: solid 1px #001600;
     background: rgba(0, 16, 0, 0.15);
+    text-shadow: 0 0 5px #81ff81;
+    backdrop-filter: blur(4px);
 }
 
 /* Content area border (extracted) */
 .journal-entry.matrixblack .journal-entry-content {
-    border: solid 1px #001600;
-    background: url("assets/theme/blackmatrix.webp");
+    border: solid 1px #000000;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(assets/theme/blackmatrix.webp);
     background-repeat: repeat;
-    background-size: auto;
+    background-size: 20%;
+    background-color: black;
 }
 
 /* Font variable definitions for page content (keeps original intent) */
@@ -1239,7 +1291,7 @@
 .journal-entry.matrixblack .journal-entry-page .journal-page-content h4,
 .journal-entry.matrixblack .journal-entry-page .journal-page-content h5,
 .journal-entry.matrixblack .journal-entry-page .journal-page-content h6 {
-    --headerFont: "Big Noodle Titling";
+    --headerFont: "Bruno Ace SC";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
     --font-h3: var(--headerFont);
@@ -1257,20 +1309,20 @@
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
 .journal-entry.matrixblack .journal-sidebar .toc .page-heading,
 .journal-entry.matrixblack .journal-sidebar .toc .h1 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Bruno Ace SC", sans-serif;
     font-size: 1.5em;
 }
 
 /* Smaller heading sizes in TOC */
 .journal-entry.matrixblack .journal-sidebar .toc .h2 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Bruno Ace SC", sans-serif;
     font-size: 1.25em;
 }
 
 .journal-entry.matrixblack .journal-sidebar .toc .h3 .heading-link,
 .journal-entry.matrixblack .content-link,
 .journal-entry.matrixblack .inline-roll {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Bruno Ace SC", sans-serif;
     font-size: 1.25em;
 }
 
@@ -1292,9 +1344,10 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.matrixblack .journal-entry-pages {
-    background: rgba(0, 16, 0, 0.15);
+    background: rgba(0, 10, 0, 0.25);
     backdrop-filter: blur(0.5px);
-}   
+    font-family: "Quantico";
+}  
 .journal-entry.matrixblack .journal-entry-content {
     border: solid 1px #000000;
     background: 
@@ -1314,6 +1367,7 @@
     height: 30px;
     border-color: ghostwhite;
     border-radius: 10px;
+    font-family: "BRUNO ACE SC";
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
