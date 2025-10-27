@@ -128,8 +128,14 @@
    and use max-width/max-height instead. */
 
 /* Title input styling (scoped) */
+
 .journal-entry.emeraldcity .journal-header .title {
-    background: rgba(128, 164, 128, 0.8);
+    background: linear-gradient(rgba(0, 32, 0, 1), rgba(0, 0, 0, .5));
+    height: 30px;
+    border-color: white;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    color: white;
 }
 
 /* Header window title (extracted inline h1 styles) */
@@ -142,15 +148,16 @@
 }
 
 /* Sidebar (border extracted) */
+
 .journal-entry.emeraldcity .journal-sidebar {
     border: solid 1px #001600;
-  
+    background: linear-gradient(rgba(0, 0, 32, 0.25), rgba(0, 0, 0, 0.5)), url(assets/theme/darkgreennoise.webp);
 }
 
 /* Content area border (extracted) */
 .journal-entry.emeraldcity .journal-entry-content {
-    border: solid 1px #001600;
-    background: url("assets/theme/darkgreennoise.webp");
+    border: solid 1px #000016;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(assets/Fond_Files/fond_silverstorm.webp), linear-gradient(rgba(0, 0, 32, 0.25), rgba(0, 0, 0, 0.5)), url(assets/theme/darkgreennoise.webp);
     background-repeat: repeat;
     background-size: auto;
 }
@@ -215,14 +222,17 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.emeraldcity .journal-entry-pages {
-    background: rgba(0, 10, 0, 0.25);
     backdrop-filter: blur(0.5px);
-}
+    font-family: 'Noto Sans';
+}   
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
 .application.sheet.journal-sheet.journal-entry.emeraldcity.expanded {
     /* Example: slightly larger box-shadow */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+.journal-entry.emeraldcity input[type=text] {
+    color: white;
 }
 
 /* Responsive suggestions (optional) */
@@ -247,8 +257,18 @@
 
 /* Title input styling (scoped) */
 .journal-entry.freedomcity .journal-header .title {
-    background: rgba(128, 164, 128, 0.8);
+    background: rgba(0, 0, 64, 0.5);
+    height: 30px;
+    border-color: white;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 64, 1), rgba(0, 0, 0, .5));
 }
+.journal-entry.freedomcity input[type=text] {
+    color: white;
+}
+
 
 /* Header window title (extracted inline h1 styles) */
 .journal-entry.freedomcity header.window-header .window-title {
@@ -262,12 +282,13 @@
 /* Sidebar (border extracted) */
 .journal-entry.freedomcity .journal-sidebar {
     border: solid 1px #001600;
+    background: linear-gradient(rgba(0, 0, 32, 0.25), rgba(0, 0, 0, 0.5)), url(assets/theme/americanbluenoise.webp);
 }
 
 /* Content area border (extracted) */
 .journal-entry.freedomcity .journal-entry-content {
-    border: solid 1px #001600;
-    background: url("assets/theme/americanbluenoise.webp");
+    border: solid 1px #000016;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(assets/Fond_Files/fond_starsstagger.webp), linear-gradient(rgba(0, 0, 32, 0.25), rgba(0, 0, 0, 0.5)), url(assets/theme/americanbluenoise.webp);
     background-repeat: repeat;
     background-size: auto;
 }
@@ -332,9 +353,9 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.freedomcity .journal-entry-pages {
-    background: rgba(0, 10, 0, 0.25);
     backdrop-filter: blur(0.5px);
-}
+    font-family: 'Noto Sans';
+}   
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
 .application.sheet.journal-sheet.journal-entry.freedomcity.expanded {

@@ -13,22 +13,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
   };
 
   async _renderHTML() {
-    console.log(this);
     const path = this.options.template;
-
-    const fonts = {
-      arial: "Arial",
-      poppins: "Poppins",
-      robotoMono: "Roboto Mono",
-      tektur: "Tektur",
-      josefinSans: "Josefin Sans",
-      goldman: "Goldman",
-      prompt: "Prompt",
-      russoOne: "Russo One",
-      righteous: "Righteous",
-      quantico: "Quantico",
-      secularOne: "Secular One",
-    };
     const userID = game.user.id;
     const journalUuid = this.options.uuid;
     const journalEntry = await fromUuid(journalUuid);
@@ -47,7 +32,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     const data = {
       listtheme: CONFIG.JT.sheetTheme, // or whatever list you have
       headerFont: headerFont, // header fonts
-      textFont: fonts,
+      textFont: headerFont,
       selectedTheme: flagTheme,
       selectedHederFont: flagHeaderFont,
       selectedBodyFont: flagBodyFont, // body fonts
@@ -90,7 +75,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
         updateData[`flags.JT.${userID}.${key}`] = value;
       });
       if (Object.keys(updateData).length > 0) {
-        if(journalEntry.ownership[userID] < 3){
+        if((journalEntry.ownership[userID] < 3) && isGM === false){
           game.modules.get("journal-styler").socketHandler.emit({
             type: "setFlag",
             journalUuid: journalUuid,

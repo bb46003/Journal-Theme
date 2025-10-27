@@ -129,6 +129,10 @@ JT.JournalHeaderFont = {
   "Volikorn SC": "Volikorn SC",
   "VT323 SC": "VT323 SC",
   "Ysabeau SC": "Ysabeau SC",
-  "Zen Tokyo Zoo": "Zen Tokyo Zoo"
-};
+  "Zen Tokyo Zoo": "Zen Tokyo Zoo",
+  'Modesto Condensed':'Modesto Condensed',
+  'Amiri':'Amiri',
+  'Signika':"Signika",
+  'Bruno Ace':"Bruno Ace"
+}
 

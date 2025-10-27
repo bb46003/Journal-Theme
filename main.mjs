@@ -38,6 +38,10 @@ Hooks.once("init", async function () {
   const myPackage = game.modules.get("journal-styler"); // or just game.system if you're a system
   myPackage.socketHandler = new SocketHandler();
 });
+Hooks.once("ready", () => {
+  const allFonts = getAllAvailableFonts();
+  console.log("Found fonts:", allFonts);
+});
 
 Hooks.on("renderJournalEntrySheet", (html) => {
   let element;
@@ -54,6 +58,7 @@ Hooks.on("renderJournalEntrySheet", (html) => {
     "journal-styler",
     "minOwnershipLevel",
   );
+   const headerFont = CONFIG.JT.JournalHeaderFont;
   const journalOwnerShip = html.document.ownership[userID];
   if (ownerShipSettings <= journalOwnerShip) {
     const header = element.querySelector(".window-header");
@@ -81,23 +86,17 @@ Hooks.on("renderJournalEntrySheet", (html) => {
   const flagTheme = flags.theme ?? gmDefault.theme;
   const flagHeaderFont = flags.headerFont ?? gmDefault.headerFont;
   const flagBodyFont = flags.bodyFont ?? gmDefault.bodyFont;
-  const fonts = {
-    arial: "Arial",
-    poppins: "Poppins",
-    robotoMono: "Roboto Mono",
-    tektur: "Tektur",
-    josefinSans: "Josefin Sans",
-    goldman: "Goldman",
-    prompt: "Prompt",
-    russoOne: "Russo One",
-    righteous: "Righteous",
-    quantico: "Quantico",
-    secularOne: "Secular One",
-  };
-  if (flagBodyFont !== undefined) {
+
+  if (flagBodyFont !== "") {
     const pages = element.querySelectorAll(".journal-entry-pages");
     pages.forEach((page) => {
-      page.style.fontFamily = fonts[flagBodyFont];
+      page.style.fontFamily = headerFont[flagBodyFont];
+    });
+  }
+  else{
+    const pages = element.querySelectorAll(".journal-entry-pages");
+    pages.forEach((page) => {
+      page.style.removeProperty("font-family");
     });
   }
   if (flagHeaderFont !== undefined) {
@@ -107,10 +106,10 @@ Hooks.on("renderJournalEntrySheet", (html) => {
     elements.forEach((element) => {
       if (flagHeaderFont !== "") {
         // set the font with !important
-        element.style.setProperty("font-family", flagHeaderFont, "important");
+        element.style.setProperty("font-family", headerFont[flagHeaderFont], "important");
       } else {
         // remove any previously set inline font
-        element.style.removeProperty("font-family");
+        
       }
     });
   }
