@@ -38,10 +38,6 @@ Hooks.once("init", async function () {
   const myPackage = game.modules.get("journal-styler"); // or just game.system if you're a system
   myPackage.socketHandler = new SocketHandler();
 });
-Hooks.once("ready", () => {
-  const allFonts = getAllAvailableFonts();
-  console.log("Found fonts:", allFonts);
-});
 
 Hooks.on("renderJournalEntrySheet", (html) => {
   let element;
@@ -134,3 +130,72 @@ function registerHandlebarsHelpers() {
     },
   });
 }
+Hooks.once("setup", () => {
+  const modulePathPart = "modules/journal-styler";
+
+  function registerFontsFromSheet(sheet) {
+    try {
+      const rules = sheet.cssRules ? Array.from(sheet.cssRules) : [];
+      rules.forEach(rule => {
+        // Only CSSFontFaceRule matters
+        if (rule instanceof CSSFontFaceRule) {
+          const fontName = rule.style.getPropertyValue("font-family")?.replace(/["']/g, "").trim();
+          if (!fontName) return;
+
+          // Ensure at least one valid weight/style
+          const weight = rule.style.getPropertyValue("font-weight") || "400";
+          const style = rule.style.getPropertyValue("font-style") || "normal";
+
+          if (!CONFIG.fontDefinitions[fontName]) {
+            CONFIG.fontDefinitions[fontName] = {
+              editor: true,
+              fonts: [{ weight, style }]
+            };
+          } else {
+            // Avoid duplicates
+            const exists = CONFIG.fontDefinitions[fontName].fonts.some(f => f.weight === weight && f.style === style);
+            if (!exists) CONFIG.fontDefinitions[fontName].fonts.push({ weight, style });
+
+            // Ensure fonts array is never empty
+            if (CONFIG.fontDefinitions[fontName].fonts.length === 0) {
+              CONFIG.fontDefinitions[fontName].fonts.push({ weight, style });
+            }
+          }
+
+        // Follow @import rules if they are accessible
+        } else if (rule instanceof CSSImportRule && rule.styleSheet) {
+          try {
+            if (rule.styleSheet.cssRules) registerFontsFromSheet(rule.styleSheet);
+          } catch (_) {
+            // Ignore cross-origin imports (like Google Fonts)
+          }
+        }
+      });
+    } catch (err) {
+      // Ignore sheets we cannot read (cross-origin)
+    }
+  }
+
+  // Loop over all stylesheets
+  Array.from(document.styleSheets).forEach(sheet => {
+    try {
+      // Inline or module sheet
+      if (sheet.href === null || (sheet.href && sheet.href.includes(modulePathPart))) {
+        registerFontsFromSheet(sheet);
+
+      } else {
+        // External sheet: check its rules for @import pointing to module
+        const rules = sheet.cssRules ? Array.from(sheet.cssRules) : [];
+        rules.forEach(rule => {
+          if (rule.href && rule.href.includes(modulePathPart)) {
+            registerFontsFromSheet(sheet);
+          }
+        });
+      }
+    } catch (err) {
+      console.warn("Skipping inaccessible stylesheet:", sheet.href);
+    }
+  });
+});
+
+
