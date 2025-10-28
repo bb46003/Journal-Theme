@@ -23,7 +23,7 @@
       "title": "Theme Selector"
     },
     "JOURNAL": {
-      "SelectYourTheme": "Selest desier Journal Theme, Header Font and Body Font"
+      "SelectYourTheme": "Select Journal Theme, Header Font, and Body Text Font"
     },
     "APPLY": "Apply",
     "SETTING": {
@@ -31,7 +31,7 @@
       "MinOwnershipHint": "When user will open Jurnal in top header he will notice additional button allow to set own Theme and fonts. It will affext only THIS user."
     },
     "MENU": {
-      "ThemeConfig": "Set defoult Theme and fots for all new Jurnals",
+      "ThemeConfig": "Set default Theme and fots for all new Jurnals",
       "OpenDialog": "Open Theme selector dialog",
       "ThemeConfigHint": "This settings will apply to all Jurnal where users do not change Theme"
     }

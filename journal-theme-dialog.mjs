@@ -21,7 +21,9 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     if(ownership === undefined && game.user.isGM){
       ownership = 3;  
     }
-    const headerFont = CONFIG.JT.JournalHeaderFont;
+    const headerFont = Object.fromEntries(
+      Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))    
+    );
     const gmDefault =
       game.settings.get("journal-styler", "GMdefoultTheme") || {};
     const jtFlags = journalEntry?.flags?.JT || {};
