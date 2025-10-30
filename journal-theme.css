@@ -10,8 +10,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Aubrey&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Baskerville&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Baskerville+SC&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Blinker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bokor&display=swap");
@@ -47,7 +47,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Handjet&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Homenaje+One+SC&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
@@ -67,13 +67,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=NTR&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron+SC&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pixelfy+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Plaster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -106,15 +106,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Underdog&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Volikorn+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=VT323+SC&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
 /* Root form/window sizing & stacking (extracted from inline style)
    If you want this responsive, change/override accordingly. */
 @font-face {

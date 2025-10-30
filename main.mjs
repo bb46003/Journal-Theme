@@ -35,8 +35,6 @@ Hooks.once("init", async function () {
     restricted: true, // true = GM only, false = everyone
   });
   registerHandlebarsHelpers();
-  const myPackage = game.modules.get("journal-styler"); // or just game.system if you're a system
-  myPackage.socketHandler = new SocketHandler();
 });
 
 Hooks.on("renderJournalEntrySheet", (html) => {
@@ -130,72 +128,49 @@ function registerHandlebarsHelpers() {
     },
   });
 }
-Hooks.once("setup", () => {
-  const modulePathPart = "modules/journal-styler";
 
-  function registerFontsFromSheet(sheet) {
-    try {
-      const rules = sheet.cssRules ? Array.from(sheet.cssRules) : [];
-      rules.forEach(rule => {
-        // Only CSSFontFaceRule matters
-        if (rule instanceof CSSFontFaceRule) {
-          const fontName = rule.style.getPropertyValue("font-family")?.replace(/["']/g, "").trim();
-          if (!fontName) return;
 
-          // Ensure at least one valid weight/style
-          const weight = rule.style.getPropertyValue("font-weight") || "400";
-          const style = rule.style.getPropertyValue("font-style") || "normal";
-
-          if (!CONFIG.fontDefinitions[fontName]) {
-            CONFIG.fontDefinitions[fontName] = {
-              editor: true,
-              fonts: [{ weight, style }]
-            };
-          } else {
-            // Avoid duplicates
-            const exists = CONFIG.fontDefinitions[fontName].fonts.some(f => f.weight === weight && f.style === style);
-            if (!exists) CONFIG.fontDefinitions[fontName].fonts.push({ weight, style });
-
-            // Ensure fonts array is never empty
-            if (CONFIG.fontDefinitions[fontName].fonts.length === 0) {
-              CONFIG.fontDefinitions[fontName].fonts.push({ weight, style });
-            }
-          }
-
-        // Follow @import rules if they are accessible
-        } else if (rule instanceof CSSImportRule && rule.styleSheet) {
-          try {
-            if (rule.styleSheet.cssRules) registerFontsFromSheet(rule.styleSheet);
-          } catch (_) {
-            // Ignore cross-origin imports (like Google Fonts)
-          }
-        }
-      });
-    } catch (err) {
-      // Ignore sheets we cannot read (cross-origin)
+Hooks.once("ready", async function() {
+      const headerFont = Object.fromEntries(
+      Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))    
+    );
+  const fontNames = Object.keys(headerFont);  
+  for (const fontName of fontNames) {
+    // Skip if font already exists in CONFIG.fontDefinitions
+    if (CONFIG.fontDefinitions && CONFIG.fontDefinitions[fontName]) {
+      continue;
     }
-  }
-
-  // Loop over all stylesheets
-  Array.from(document.styleSheets).forEach(sheet => {
+    
     try {
-      // Inline or module sheet
-      if (sheet.href === null || (sheet.href && sheet.href.includes(modulePathPart))) {
-        registerFontsFromSheet(sheet);
-
-      } else {
-        // External sheet: check its rules for @import pointing to module
-        const rules = sheet.cssRules ? Array.from(sheet.cssRules) : [];
-        rules.forEach(rule => {
-          if (rule.href && rule.href.includes(modulePathPart)) {
-            registerFontsFromSheet(sheet);
-          }
+      let cssUrl = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g, '+')}&display=swap`;
+      if(fontName === "UnifrakturCook"){
+        cssUrl = 'https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap';
+      }
+     
+      const response = await fetch(cssUrl);
+      const cssText = await response.text();
+      const fontUrls = [];
+      const urlRegex = /url\(([^)]+\.woff2[^)]*)\)/g;
+      let match;
+      while ((match = urlRegex.exec(cssText)) !== null) {
+        fontUrls.push(match[1].replace(/['"]/g, ''));
+      }
+      if (fontUrls.length > 0) {
+        await foundry.applications.settings.menus.FontConfig.loadFont(fontName, {
+          editor: true,
+          fonts: [{
+            urls: fontUrls,
+            weight: "400",
+            style: "normal"
+          }]
         });
+      } else {
+        
       }
     } catch (err) {
-      console.warn("Skipping inaccessible stylesheet:", sheet.href);
+
     }
-  });
+
+  }
+  
 });
-
-
