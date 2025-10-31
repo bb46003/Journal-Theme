@@ -1,7 +1,7 @@
 import { JT } from "./config.mjs";
 import { JournalThemeDialog } from "./journal-theme-dialog.mjs";
 import { SocketHandler } from "./socketHandler.mjs";
-
+import { i as inputRules, e as ellipsis, w as wrappingInputRule, t as textblockTypeInputRule, I as InputRule, k as keymap, u as undo, r as redo, a as undoInputRule, j as joinUp, b as joinDown, l as lift, s as selectParentNode, c as toggleMark, d as wrapInList, f as liftListItem, g as sinkListItem, h as setBlockType, m as chainCommands, n as exitCode, P as Plugin, o as wrapIn, p as deleteTable, q as addColumnAfter, v as addColumnBefore, x as deleteColumn, y as addRowAfter, z as addRowBefore, A as deleteRow, B as mergeCells, C as splitCell, T as TextSelection, D as liftTarget, E as autoJoin, R as ResolvedPos, F as tableNodes, S as Schema, G as splitListItem, H as DOMParser$2, J as DOMSerializer, K as Slice, L as tableEditing, M as columnResizing, N as history$1, O as gapCursor, Q as dropCursor, U as baseKeymap, V as AllSelection, W as EditorState, X as EditorView, Y as PluginKey, Z as Step, _ as index, $ as index$1, a0 as index$2, a1 as index$3, a2 as index$4, a3 as index$5, a4 as index$6, a5 as basicSetup, a6 as markdown, a7 as json, a8 as linter, a9 as javascript, aa as lintGutter, ab as esLint, ac as Linter, ad as html, ae as syntaxHighlighting, af as HighlightStyle, ag as tags, ah as markdownLanguage, ai as jsonLanguage, aj as javascriptLanguage, ak as htmlLanguage, al as jsonParseLinter, am as indentUnit, an as keymap$1, ao as indentWithTab, ap as EditorView$1, aq as Compartment, ar as EditorSelection } from '../../scripts/vendor.mjs';
 Hooks.once("init", async function () {
   CONFIG.JT = JT;
   game.settings.register("journal-styler", "minOwnershipLevel", {
@@ -35,7 +35,88 @@ Hooks.once("init", async function () {
     restricted: true, // true = GM only, false = everyone
   });
   registerHandlebarsHelpers();
+  const myPackage = game.modules.get("journal-styler"); // or just game.system if you're a system
+  myPackage.socketHandler = new SocketHandler();
+
+
+
+    // Use Foundry's configuration system to extend the schema
+    const originalConfigure = window.ProseMirror.defaultSchema.marks;
+    const safeClone = structuredClone(JSON.parse(JSON.stringify(el)));
+    console.log(safeClone)
+    //fontSize.name = "fontSize",
+    //fontSize.spec = {
+//                 parseDOM: [{
+ ////                   style: "font-size",
+ //                   getAttrs: (value) => value ? { size: value } : false
+//                  }],
+ ///                 toDOM: (node) => ["span", { style: `font-size: ${node.attrs.size}` }, 0],
+ //                 attrs : {size: { default: "10px" }}
+  //              }
+//    window.ProseMirror.defaultSchema.marks['fontSize']= fontSize;
+
+  //  console.log(window.ProseMirror.defaultSchema.marks)
 });
+
+
+Hooks.once("prosemirrorSchema", (schema) => {
+  schema.marks.fontSize = {
+    attrs: {
+      size: { default: null }
+    },
+    parseDOM: [{
+      style: "font-size",
+      getAttrs: value => ({ size: value })
+    }],
+    toDOM: mark => ["span", { style: `font-size: ${mark.attrs.size}` }, 0]
+  };
+});
+Hooks.once("ready", async function() {
+  const headerFont = Object.fromEntries(
+    Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))    
+  );
+  const fontNames = Object.keys(headerFont);  
+  for (const fontName of fontNames) {
+    // Skip if font already exists in CONFIG.fontDefinitions
+    if (CONFIG.fontDefinitions && CONFIG.fontDefinitions[fontName]) {
+      continue;
+    }
+    
+    try {
+      let cssUrl = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g, '+')}&display=swap`;
+      if(fontName === "UnifrakturCook"){
+        cssUrl = 'https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap';
+      }
+      const fontUrls = [];
+      if (fontName !== "Big Noodle Titling") {
+        const response = await fetch(cssUrl);
+        const cssText = await response.text();
+        const urlRegex = /url\(([^)]+\.woff2[^)]*)\)/g;
+        let match;
+        while ((match = urlRegex.exec(cssText)) !== null) {
+          fontUrls.push(match[1].replace(/['"]/g, ''));
+        }
+      } else {
+        fontUrls.push("modules/journal-styler/assets/font/big_noodle_titling.ttf");
+      }
+      if (fontUrls.length > 0) {
+        await foundry.applications.settings.menus.FontConfig.loadFont(fontName, {
+          editor: true,
+          fonts: [{
+            urls: fontUrls,
+            weight: "400",
+            style: "normal"
+          }]
+        });
+      }
+    } catch (err) {
+      console.warn(`Failed to load font ${fontName}:`, err);
+    }
+  }
+});
+
+
+
 
 Hooks.on("renderJournalEntrySheet", (html) => {
   let element;
@@ -112,6 +193,7 @@ Hooks.on("renderJournalEntrySheet", (html) => {
     element.className = `application sheet journal-sheet journal-entry expanded ${flagTheme}`;
   }
 });
+
 function registerHandlebarsHelpers() {
   Handlebars.registerHelper({
     eq: (v1, v2) => v1 === v2,
@@ -130,47 +212,89 @@ function registerHandlebarsHelpers() {
 }
 
 
-Hooks.once("ready", async function() {
-      const headerFont = Object.fromEntries(
-      Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))    
-    );
-  const fontNames = Object.keys(headerFont);  
-  for (const fontName of fontNames) {
-    // Skip if font already exists in CONFIG.fontDefinitions
-    if (CONFIG.fontDefinitions && CONFIG.fontDefinitions[fontName]) {
-      continue;
-    }
-    
-    try {
-      let cssUrl = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g, '+')}&display=swap`;
-      if(fontName === "UnifrakturCook"){
-        cssUrl = 'https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap';
-      }
-     
-      const response = await fetch(cssUrl);
-      const cssText = await response.text();
-      const fontUrls = [];
-      const urlRegex = /url\(([^)]+\.woff2[^)]*)\)/g;
-      let match;
-      while ((match = urlRegex.exec(cssText)) !== null) {
-        fontUrls.push(match[1].replace(/['"]/g, ''));
-      }
-      if (fontUrls.length > 0) {
-        await foundry.applications.settings.menus.FontConfig.loadFont(fontName, {
-          editor: true,
-          fonts: [{
-            urls: fontUrls,
-            weight: "400",
-            style: "normal"
-          }]
-        });
-      } else {
+
+
+Hooks.on("getProseMirrorMenuDropDowns", function (_app, dropdowns) {
+    const FONT_SIZES = [
+        { size: 8, title: "8px" },
+        { size: 9, title: "9px" },
+        { size: 10, title: "10px" },
+        { size: 11, title: "11px" },
+        { size: 12, title: "12px" },
+        { size: 14, title: "14px" },
+        { size: 16, title: "16px" },
+        { size: 18, title: "18px" },
+        { size: 20, title: "20px" },
+        { size: 22, title: "22px" },
+        { size: 24, title: "24px" },
+        { size: 26, title: "26px" },
+        { size: 28, title: "28px" },
+        { size: 32, title: "32px" },
+        { size: 36, title: "36px" },
+        { size: 40, title: "40px" },
+        { size: 48, title: "48px" }
+    ];
+
+    const fontSizeButtons = FONT_SIZES.map(fontSize => ({
+        action: `font-size-${fontSize.size}`,
+        attrs: { size: fontSize.size },
+        cmd: toggleMark(_app.schema.marks.fontSize, {size: fontSize.size}),
+        mark: "fontSize", // Custom mark name
+        title: fontSize.title,
+        priority: 2,
+    }));
+
+    dropdowns["fontSize"] = {
+        cssClass: "font-size-dropdown",
+        entries: fontSizeButtons,
+        icon: '<i class="fa fa-text-height"></i>',
+        title: "Font Size"
+    };
+
+    function applyFontSize(size, state, dispatch) {
+        const { schema, selection } = state;
+        const { from, to } = selection;
         
-      }
-    } catch (err) {
-
+        // Try to use existing font mark or create similar approach
+        const markType = schema.marks.font || schema.marks.span;
+        
+        if (!markType) {
+            console.warn("No suitable mark found for font size");
+            return false;
+        }
+        
+        const tr = state.tr;
+        const fontSize = `${size}px`;
+        
+        // Remove existing font marks in selection
+        tr.removeMark(from, to, markType);
+        
+        // Create mark with font size - similar to font family structure
+        let mark;
+        if (markType.name === 'fontSize') {
+            // If using font mark (like font family does)
+            mark = markType.create({ 
+                size: fontSize,
+                size: `font-size: ${fontSize}`
+            });
+        } else {
+            // If using span mark as fallback
+            mark = markType.create({ 
+                size: `font-size: ${fontSize}` 
+            });
+        }
+        
+        if (!selection.empty) {
+            tr.addMark(from, to, mark);
+        } else {
+            tr.addStoredMark(mark);
+        }
+        
+        if (dispatch) {
+            dispatch(tr);
+            return true;
+        }
+        
+        return false;
     }
-
-  }
-  
 });

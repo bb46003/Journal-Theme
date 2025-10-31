@@ -38,6 +38,7 @@ JT.JournalHeaderFont = {
   "Bungee Inline": "Bungee Inline",
   "Bungee Outline": "Bungee Outline",
   "Butcherman": "Butcherman",
+  "Big Noodle Titling": "Big Noodle Titling",
   "Caesar Dressing": "Caesar Dressing",
   "Cinzel": "Cinzel",
   "Codystar": "Codystar",
