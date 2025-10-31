@@ -115,6 +115,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
 /* Root form/window sizing & stacking (extracted from inline style)
    If you want this responsive, change/override accordingly. */
 @font-face {
@@ -815,15 +816,16 @@
 
 /* Title input styling (scoped) */
 .journal-entry.bloodred2 .journal-header .title {
-    background: rgba(128, 164, 128, 0.8);
-    font-family: "Big Noodle Titling", sans-serif;
+    background: none;
+    height: 30px;
+    font-family: "Alegreya Sans SC";
 }
+
 
 /* Header window title (extracted inline h1 styles) */
 .journal-entry.bloodred2 header.window-header .window-title {
-    font-family: "Big Noodle Titling", sans-serif;
-    /* "x-large" mapped to explicit size for consistency */
-    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
+    font-family: "Alegreya Sans SC";
+    font-size: 1.25rem;
     margin: 0;
     line-height: 1;
 }
@@ -836,9 +838,9 @@
 /* Content area border (extracted) */
 .journal-entry.bloodred2 .journal-entry-content {
     border: solid 1px #001600;
-    background: url("assets/theme/bloodred2noise.webp");
-    background-repeat: repeat;
-    background-size: auto;
+    background: linear-gradient(rgba(32, 0, 0, .25), rgba(32, 0, 0, 1)), url(assets/Fond_Files/fond_drip3.webp), url(assets/theme/bloodrednoise.webp);
+    background-repeat: repeat, no-repeat, repeat;
+    background-size: contain, auto;
 }
 
 /* Font variable definitions for page content (keeps original intent) */
@@ -849,7 +851,7 @@
 .journal-entry.bloodred2 .journal-entry-page .journal-page-content h5,
 .journal-entry.bloodred2 .journal-entry-page .journal-page-content h6,
 .journal-entry.bloodred2 .journal-page-header{
-    --headerFont: "Big Noodle Titling";
+    --headerFont: "Alegreya Sans SC";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
     --font-h3: var(--headerFont);
@@ -867,20 +869,20 @@
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
 .journal-entry.bloodred2 .journal-sidebar .toc .page-heading,
 .journal-entry.bloodred2 .journal-sidebar .toc .h1 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Alegreya Sans SC", sans-serif;
     font-size: 1.5em;
 }
 
 /* Smaller heading sizes in TOC */
 .journal-entry.bloodred2 .journal-sidebar .toc .h2 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Alegreya Sans SC", sans-serif;
     font-size: 1.25em;
 }
 
 .journal-entry.bloodred2 .journal-sidebar .toc .h3 .heading-link,
 .journal-entry.bloodred2 .content-link,
 .journal-entry.bloodred2 .inline-roll {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Alegreya Sans SC", sans-serif;
     font-size: 1.25em;
 }
 
@@ -902,13 +904,11 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.bloodred2 .journal-entry-pages {
-    background: rgba(0, 10, 0, 0.25);
-    backdrop-filter: blur(0.5px);
+   font-family: "Open Sans";
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
 .application.sheet.journal-sheet.journal-entry.bloodred2.expanded {
-    /* Example: slightly larger box-shadow */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
@@ -935,7 +935,7 @@
 /* Title input styling (scoped) */
 
 .journal-entry.gothblack header.window-header .window-title {
-    font-family: "Tektur", sans-serif;
+    font-family: "Julius Sans One", sans-serif;
     letter-spacing: .3em;
     background: none;
     text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
@@ -944,11 +944,12 @@
 
 /* Header window title (extracted inline h1 styles) */
 .journal-entry.gothblack header.window-header .window-title {
-    font-family: "Tektur", sans-serif;
+    font-family: "Julius Sans One", sans-serif;
     /* "x-large" mapped to explicit size for consistency */
     font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
     margin: 0;
     line-height: 1;
+    letter-spacing: 1em;
 }
 
 /* Sidebar (border extracted) */
@@ -962,11 +963,11 @@
     text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
 }
 .journal-entry.gothblack .journal-header .title {
-    letter-spacing: .3em;
+    letter-spacing: .65em;
     background: none;
     text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
     text-decoration-thickness: 50px;
-    font-family: "Tektur", sans-serif;
+    font-family: "Julius Sans One", sans-serif;
 }
 
 /* Content area border (extracted) */
@@ -986,8 +987,8 @@
 .journal-entry.gothblack .journal-entry-page .journal-page-content h4,
 .journal-entry.gothblack .journal-entry-page .journal-page-content h5,
 .journal-entry.gothblack .journal-entry-page .journal-page-content h6,
-.journal-entry.bloodred2 .journal-page-header{
-    --headerFont: "Tektur";
+.journal-entry.gothblack .journal-page-header{
+    --headerFont: "Julius Sans One";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
     --font-h3: var(--headerFont);
@@ -1005,21 +1006,21 @@
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
 .journal-entry.gothblack .journal-sidebar .toc .page-heading, 
 .journal-entry.gothblack .journal-sidebar .toc .h1 .heading-link {
-    font-family: "Tektur", sans-serif;
+    font-family: "Julius Sans One", sans-serif;
     font-size: 1.5em;
     text-shadow: 2px 2px 2px #000000, 4px 4px 2px #000000, 6px 6px 2px #000000;
 }
 
 /* Smaller heading sizes in TOC */
 .journal-entry.gothblack .journal-sidebar .toc .h2 .heading-link {
-    font-family: "Tektur", sans-serif;
+    font-family: "Julius Sans One", sans-serif;
     font-size: 1.25em;
 }
 
 .journal-entry.gothblack .journal-sidebar .toc .h3 .heading-link,
 .journal-entry.gothblack .content-link,
 .journal-entry.gothblack .inline-roll {
-    font-family: "Tektur", sans-serif;
+    font-family: "Julius Sans One", sans-serif;
     font-size: 1.25em;
 }
 
@@ -1043,7 +1044,7 @@
 .journal-entry.gothblack .journal-entry-pages {
     background: rgba(0, 10, 0, 0.25);
     backdrop-filter: blur(0.5px);
-    font-family: "Goldman"
+    font-family: "Libre Franklin"
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
@@ -1168,7 +1169,7 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.cosmicblue .journal-entry-pages {
-    background: rgba(128, 164, 128, 0.8);
+    background: none;
     backdrop-filter: blur(0.5px);
     font-family: "Goldman";
 }   
@@ -1201,30 +1202,40 @@
 
 /* Title input styling (scoped) */
 .journal-entry.starburst .journal-header .title {
-    background: rgba(128, 164, 128, 0.8);
-     font-family: "Big Noodle Titling", sans-serif;
+    background: none;
+    height: 30px;
+    border: solid 3px #ffffff;
+    border-radius: 25px;
+    margin: 3px;
+    font-family: "Aubrey";
+    padding: 20px;
 }
 
 /* Header window title (extracted inline h1 styles) */
 .journal-entry.starburst header.window-header .window-title {
-    font-family: "Big Noodle Titling", sans-serif;
-    /* "x-large" mapped to explicit size for consistency */
-    font-size: 1.25rem; /* adjust to taste; x-large is roughly 1.25rem */
-    margin: 0;
-    line-height: 1;
+    font-family: "Aubrey";
+    background: none;
+    font-size: 1.25rem; 
 }
 
 /* Sidebar (border extracted) */
 .journal-entry.starburst .journal-sidebar {
-    border: solid 1px #001600;
+    background: linear-gradient(rgba(0, 0, 96, 0.75), rgba(0, 0, 32, 0.5)), url(assets/Fond_Files/fond_cosmic2.webp), url(assets/theme/darkbluenoise.webp);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: auto, 75%, auto;
+    border: solid 3px #ffffff;
+    border-radius: 25px;
+    margin-right: 5px;
 }
 
 /* Content area border (extracted) */
 .journal-entry.starburst .journal-entry-content {
-    border: solid 1px #001600;
-    background: url("assets/theme/darkerbluenoise.webp");
-    background-repeat: repeat;
-    background-size: auto;
+    background: linear-gradient(rgba(0, 0, 96, 0.75), rgba(0, 0, 32, 0.5)), url(assets/Fond_Files/fond_cosmic2.webp), url(assets/theme/darkbluenoise.webp);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: auto, 25%, auto;
+    border: solid 3px #ffffff;
+    border-radius: 25px;
+    margin-left: 5px;
 }
 
 /* Font variable definitions for page content (keeps original intent) */
@@ -1235,7 +1246,7 @@
 .journal-entry.starburst .journal-entry-page .journal-page-content h5,
 .journal-entry.starburst .journal-entry-page .journal-page-content h6,
 .journal-entry.starburst .journal-page-header {
-    --headerFont: "Big Noodle Titling";
+    --headerFont: "Aubrey";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);
     --font-h3: var(--headerFont);
@@ -1253,20 +1264,20 @@
 /* Sidebar TOC headings - use explicit selectors present in Foundry */
 .journal-entry.starburst .journal-sidebar .toc .page-heading,
 .journal-entry.starburst .journal-sidebar .toc .h1 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Aubrey", sans-serif;
     font-size: 1.5em;
 }
 
 /* Smaller heading sizes in TOC */
 .journal-entry.starburst .journal-sidebar .toc .h2 .heading-link {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Aubrey", sans-serif;
     font-size: 1.25em;
 }
 
 .journal-entry.starburst .journal-sidebar .toc .h3 .heading-link,
 .journal-entry.starburst .content-link,
 .journal-entry.starburst .inline-roll {
-    font-family: "Big Noodle Titling", sans-serif;
+    font-family: "Aubrey", sans-serif;
     font-size: 1.25em;
 }
 
@@ -1288,14 +1299,16 @@
 
 /* Optional: reduce transparency and add subtle shadow to the journal content */
 .journal-entry.starburst .journal-entry-pages {
-    background: rgba(0, 10, 0, 0.25);
-    backdrop-filter: blur(0.5px);
+    background: none;
+    font-family: "Aubrey"
 }
 
 /* If you want the .expanded variant to have slightly different layout, add rules: */
 .application.sheet.journal-sheet.journal-entry.starburst.expanded {
-    /* Example: slightly larger box-shadow */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    background: linear-gradient(rgba(0, 0, 96, 0.75), rgba(0, 0, 32, 0.5)), url(assets/Fond_files/fond_starburst.webp), url(assets/theme/darkbluenoise.webp);
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: auto, 75%, auto;
 }
 
 /* Responsive suggestions (optional) */
@@ -1370,7 +1383,7 @@
 .journal-entry.matrixblack .journal-entry-page .journal-page-content h4,
 .journal-entry.matrixblack .journal-entry-page .journal-page-content h5,
 .journal-entry.matrixblack .journal-entry-page .journal-page-content h6,
-.journal-entry.starburst .journal-page-header {
+.journal-entry.matrixblack .journal-page-header {
     --headerFont: "Bruno Ace SC";
     --font-h1: var(--headerFont);
     --font-h2: var(--headerFont);

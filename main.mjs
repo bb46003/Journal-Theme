@@ -1,23 +1,24 @@
 import { JT } from "./config.mjs";
 import { JournalThemeDialog } from "./journal-theme-dialog.mjs";
 import { SocketHandler } from "./socketHandler.mjs";
-import { i as inputRules, e as ellipsis, w as wrappingInputRule, t as textblockTypeInputRule, I as InputRule, k as keymap, u as undo, r as redo, a as undoInputRule, j as joinUp, b as joinDown, l as lift, s as selectParentNode, c as toggleMark, d as wrapInList, f as liftListItem, g as sinkListItem, h as setBlockType, m as chainCommands, n as exitCode, P as Plugin, o as wrapIn, p as deleteTable, q as addColumnAfter, v as addColumnBefore, x as deleteColumn, y as addRowAfter, z as addRowBefore, A as deleteRow, B as mergeCells, C as splitCell, T as TextSelection, D as liftTarget, E as autoJoin, R as ResolvedPos, F as tableNodes, S as Schema, G as splitListItem, H as DOMParser$2, J as DOMSerializer, K as Slice, L as tableEditing, M as columnResizing, N as history$1, O as gapCursor, Q as dropCursor, U as baseKeymap, V as AllSelection, W as EditorState, X as EditorView, Y as PluginKey, Z as Step, _ as index, $ as index$1, a0 as index$2, a1 as index$3, a2 as index$4, a3 as index$5, a4 as index$6, a5 as basicSetup, a6 as markdown, a7 as json, a8 as linter, a9 as javascript, aa as lintGutter, ab as esLint, ac as Linter, ad as html, ae as syntaxHighlighting, af as HighlightStyle, ag as tags, ah as markdownLanguage, ai as jsonLanguage, aj as javascriptLanguage, ak as htmlLanguage, al as jsonParseLinter, am as indentUnit, an as keymap$1, ao as indentWithTab, ap as EditorView$1, aq as Compartment, ar as EditorSelection } from '../../scripts/vendor.mjs';
+import FontSize from "./font-size.mjs";
+
 Hooks.once("init", async function () {
   CONFIG.JT = JT;
   game.settings.register("journal-styler", "minOwnershipLevel", {
-    name: "JT.SETTING.MinOwnership", // left-hand label
-    hint: "JT.SETTING.MinOwnershipHint", // subtext hint
-    scope: "world", // global for all users
-    config: true, // show in Module Settings
-    type: Number, // stored as number
+    name: "JT.SETTING.MinOwnership", 
+    hint: "JT.SETTING.MinOwnershipHint", 
+    scope: "world",
+    config: true, 
+    type: Number,
     choices: {
-      1: "Limited", // user-friendly label
+      1: "Limited", 
       2: "Observer",
       3: "Owner",
     },
-    default: 3, // default = Owner
+    default: 1, 
   });
-  // Register the stored default theme for GM
+
   game.settings.register("journal-styler", "GMdefoultTheme", {
     scope: "world",
     config: false,
@@ -25,68 +26,93 @@ Hooks.once("init", async function () {
     type: Object,
   });
 
-  // Register menu entry (button) in the Settings UI
+
   game.settings.registerMenu("journal-styler", "themeMenu", {
-    name: "JT.MENU.ThemeConfig", // shown as the left label
-    label: "JT.MENU.OpenDialog", // the button text
-    hint: "JT.MENU.ThemeConfigHint", // subtext hint
-    icon: "fas fa-palette", // small icon on the button
-    type: JournalThemeDialog, // this is your dialog class
-    restricted: true, // true = GM only, false = everyone
+    name: "JT.MENU.ThemeConfig", 
+    label: "JT.MENU.OpenDialog", 
+    hint: "JT.MENU.ThemeConfigHint", 
+    icon: "fas fa-palette",
+    type: JournalThemeDialog, 
+    restricted: true, 
   });
   registerHandlebarsHelpers();
-  const myPackage = game.modules.get("journal-styler"); // or just game.system if you're a system
+  const myPackage = game.modules.get("journal-styler"); 
   myPackage.socketHandler = new SocketHandler();
 
 
-
-    // Use Foundry's configuration system to extend the schema
-    const originalConfigure = window.ProseMirror.defaultSchema.marks;
-    const safeClone = structuredClone(JSON.parse(JSON.stringify(el)));
-    console.log(safeClone)
-    //fontSize.name = "fontSize",
-    //fontSize.spec = {
-//                 parseDOM: [{
- ////                   style: "font-size",
- //                   getAttrs: (value) => value ? { size: value } : false
-//                  }],
- ///                 toDOM: (node) => ["span", { style: `font-size: ${node.attrs.size}` }, 0],
- //                 attrs : {size: { default: "10px" }}
-  //              }
-//    window.ProseMirror.defaultSchema.marks['fontSize']= fontSize;
-
-  //  console.log(window.ProseMirror.defaultSchema.marks)
 });
 
-
-Hooks.once("prosemirrorSchema", (schema) => {
-  schema.marks.fontSize = {
-    attrs: {
-      size: { default: null }
-    },
-    parseDOM: [{
-      style: "font-size",
-      getAttrs: value => ({ size: value })
-    }],
-    toDOM: mark => ["span", { style: `font-size: ${mark.attrs.size}` }, 0]
-  };
-});
 Hooks.once("ready", async function() {
+  
+  const progressContainer = document.createElement("div");
+  Object.assign(progressContainer.style, {
+    position: "fixed",
+    top: "10%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "300px",
+    height: "24px",
+    background: "rgba(0,0,0,0.4)",
+    border: "1px solid #999",
+    borderRadius: "8px",
+    zIndex: "99999",
+    backdropFilter: "blur(4px)",
+    overflow: "hidden",
+  });
+
+
+  const fillBar = document.createElement("div");
+  Object.assign(fillBar.style, {
+    height: "100%",
+    width: "0%",
+    background: "linear-gradient(90deg, #002fffff, #28048bff)",
+    transition: "width 0.3s ease",
+  });
+  const textOverlay = document.createElement("div");
+  Object.assign(textOverlay.style, {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#fff",
+    fontSize: "12px",
+    fontFamily: "sans-serif",
+    pointerEvents: "none",
+    textShadow: "0 0 4px rgba(0,0,0,0.8)",
+  });
+  textOverlay.textContent = "Loading fonts...";
+
+
+  progressContainer.appendChild(fillBar);
+  progressContainer.appendChild(textOverlay);
+  document.body.appendChild(progressContainer);
+
   const headerFont = Object.fromEntries(
-    Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))    
+    Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))
   );
-  const fontNames = Object.keys(headerFont);  
+  const fontNames = Object.keys(headerFont);
+  const total = fontNames.length;
+  let loaded = 0;
+
   for (const fontName of fontNames) {
-    // Skip if font already exists in CONFIG.fontDefinitions
     if (CONFIG.fontDefinitions && CONFIG.fontDefinitions[fontName]) {
+      loaded++;
+      const pct = Math.round((loaded / total) * 100);
+      fillBar.style.width = `${pct}%`;
+      textOverlay.textContent = `Loading fonts... (${loaded}/${total}) ${pct}%`;
       continue;
     }
-    
+
     try {
       let cssUrl = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g, '+')}&display=swap`;
-      if(fontName === "UnifrakturCook"){
+      if (fontName === "UnifrakturCook") {
         cssUrl = 'https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap';
       }
+
       const fontUrls = [];
       if (fontName !== "Big Noodle Titling") {
         const response = await fetch(cssUrl);
@@ -99,6 +125,7 @@ Hooks.once("ready", async function() {
       } else {
         fontUrls.push("modules/journal-styler/assets/font/big_noodle_titling.ttf");
       }
+
       if (fontUrls.length > 0) {
         await foundry.applications.settings.menus.FontConfig.loadFont(fontName, {
           editor: true,
@@ -112,8 +139,25 @@ Hooks.once("ready", async function() {
     } catch (err) {
       console.warn(`Failed to load font ${fontName}:`, err);
     }
+
+   
+    loaded++;
+    const pct = Math.round((loaded / total) * 100);
+    fillBar.style.width = `${pct}%`;
+    textOverlay.textContent = `Loading fonts... (${loaded}/${total}) ${pct}%`;
   }
+
+  
+  fillBar.style.width = "100%";
+  textOverlay.textContent = "All fonts loaded ✔";
+  setTimeout(() => {
+    progressContainer.style.transition = "opacity 0.6s ease";
+    progressContainer.style.opacity = "0";
+    setTimeout(() => progressContainer.remove(), 600);
+  }, 800);
 });
+
+
 
 
 
@@ -180,16 +224,12 @@ Hooks.on("renderJournalEntrySheet", (html) => {
     );
     elements.forEach((element) => {
       if (flagHeaderFont !== "") {
-        // set the font with !important
         element.style.setProperty("font-family", headerFont[flagHeaderFont], "important");
-      } else {
-        // remove any previously set inline font
-        
-      }
+      } 
     });
   }
   if (flagTheme !== undefined) {
-    //apply Theme
+
     element.className = `application sheet journal-sheet journal-entry expanded ${flagTheme}`;
   }
 });
@@ -211,90 +251,10 @@ function registerHandlebarsHelpers() {
   });
 }
 
-
-
-
-Hooks.on("getProseMirrorMenuDropDowns", function (_app, dropdowns) {
-    const FONT_SIZES = [
-        { size: 8, title: "8px" },
-        { size: 9, title: "9px" },
-        { size: 10, title: "10px" },
-        { size: 11, title: "11px" },
-        { size: 12, title: "12px" },
-        { size: 14, title: "14px" },
-        { size: 16, title: "16px" },
-        { size: 18, title: "18px" },
-        { size: 20, title: "20px" },
-        { size: 22, title: "22px" },
-        { size: 24, title: "24px" },
-        { size: 26, title: "26px" },
-        { size: 28, title: "28px" },
-        { size: 32, title: "32px" },
-        { size: 36, title: "36px" },
-        { size: 40, title: "40px" },
-        { size: 48, title: "48px" }
-    ];
-
-    const fontSizeButtons = FONT_SIZES.map(fontSize => ({
-        action: `font-size-${fontSize.size}`,
-        attrs: { size: fontSize.size },
-        cmd: toggleMark(_app.schema.marks.fontSize, {size: fontSize.size}),
-        mark: "fontSize", // Custom mark name
-        title: fontSize.title,
-        priority: 2,
-    }));
-
-    dropdowns["fontSize"] = {
-        cssClass: "font-size-dropdown",
-        entries: fontSizeButtons,
-        icon: '<i class="fa fa-text-height"></i>',
-        title: "Font Size"
-    };
-
-    function applyFontSize(size, state, dispatch) {
-        const { schema, selection } = state;
-        const { from, to } = selection;
-        
-        // Try to use existing font mark or create similar approach
-        const markType = schema.marks.font || schema.marks.span;
-        
-        if (!markType) {
-            console.warn("No suitable mark found for font size");
-            return false;
-        }
-        
-        const tr = state.tr;
-        const fontSize = `${size}px`;
-        
-        // Remove existing font marks in selection
-        tr.removeMark(from, to, markType);
-        
-        // Create mark with font size - similar to font family structure
-        let mark;
-        if (markType.name === 'fontSize') {
-            // If using font mark (like font family does)
-            mark = markType.create({ 
-                size: fontSize,
-                size: `font-size: ${fontSize}`
-            });
-        } else {
-            // If using span mark as fallback
-            mark = markType.create({ 
-                size: `font-size: ${fontSize}` 
-            });
-        }
-        
-        if (!selection.empty) {
-            tr.addMark(from, to, mark);
-        } else {
-            tr.addStoredMark(mark);
-        }
-        
-        if (dispatch) {
-            dispatch(tr);
-            return true;
-        }
-        
-        return false;
-    }
+Hooks.on("createProseMirrorEditor", (_uuid, plugins, _options) => {
+  const Menu = FontSize.prosemirror.FontSizeProseMirrorMenu;
+  const { defaultSchema } = foundry.prosemirror;
+  const options = plugins.menu.options;
+  plugins.menu = Menu.build(defaultSchema, options);
 });
+
