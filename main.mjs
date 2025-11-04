@@ -252,9 +252,54 @@ function registerHandlebarsHelpers() {
 }
 
 Hooks.on("createProseMirrorEditor", (_uuid, plugins, _options) => {
+  console.log(plugins)
   const Menu = FontSize.prosemirror.FontSizeProseMirrorMenu;
   const { defaultSchema } = foundry.prosemirror;
   const options = plugins.menu.options;
   plugins.menu = Menu.build(defaultSchema, options);
+});
+
+Hooks.on("getProseMirrorMenuDropDowns", (_app, dropdowns) => {
+  const dropdownArray = Array.isArray(dropdowns) ? dropdowns : Object.values(dropdowns);
+  const formatDropdown = dropdownArray.find(d => d.cssClass === "format");
+  if (!formatDropdown) return;
+  const headingsEntry = formatDropdown.entries[0];
+  const headingsDropdown = {
+    cssClass: "headings-only",
+    entries: headingsEntry.children,
+    title: headingsEntry.title || "Headings"
+  };
+  formatDropdown.entries.shift()
+  dropdownArray.push(headingsDropdown);
+  if (!Array.isArray(dropdowns)) {
+    Object.assign(dropdowns, [headingsDropdown]);
+  }
+ const inline = formatDropdown.entries[1].children;
+const typesToExtract = ["italic", "bold", "underline"];
+const extractedItems = inline.filter(element => typesToExtract.includes(element.action));
+formatDropdown.entries[1].children = inline.filter(element => !typesToExtract.includes(element.action));
+const iconMap = {
+  bold: "<i class='fa-solid fa-bold fa-fw'></i>",
+  italic: "<i class='fa-solid fa-italic fa-fw'></i>",
+  underline: "<i class='fa-solid fa-underline fa-fw'></i>"
+};
+
+// Convert to _app.items format with icons
+const convertedItems = extractedItems.map(e => ({
+  action: e.action,
+  cmd: e.cmd,
+  cssClass: "pm-button",
+  icon: iconMap[e.action] || "",
+  scope: "",
+  title: e.title
+}));
+
+// Push into _app.items
+if (!_app.items) _app.items = [];
+_app.items.push(...convertedItems);
+
+console.log("Converted items with icons:", convertedItems);
+_app.items.push(...extractedItems);
+
 });
 
