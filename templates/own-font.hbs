@@ -1,0 +1,64 @@
+<div class="own-fonts-dialog">
+  <section class="added-fonts">
+    <span>{{localize "JT.OWNFONT.addedFonts"}}</span>
+    {{#if (gt (length this) 0)}}
+      <ul class="font-list">
+        {{#each this as |font name|}}
+          <li class="font-entry" data-name="{{name}}" data-type="{{font.type}}">
+            <strong>{{name}}</strong>
+            {{#if (eq font.type "google")}}
+              <span class="font-type">[Google Font]</span>
+              <code>{{font.url}}</code>
+            {{else}}
+              <span class="font-type">[Local Font]</span>
+              <code>{{font.path}}</code>
+            {{/if}}
+            <button type="button" class="remove-font" data-action="{{#if (eq font.type 'google')}}removeGoogleFont{{else}}removeLocalFont{{/if}}">
+              <i class="fa-solid fa-trash"></i> {{localize "JT.OWNFONT.remove"}}
+            </button>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p class="hint">{{localize "JT.OWNFONT.noFonts"}}</p>
+    {{/if}}
+  </section>
+  <hr>
+  <section class="add-google-font">
+    <h3>{{localize "JT.OWNFONT.addGoogleFont"}}</h3>
+    <div class="form-fields">
+      <label>{{localize "JT.OWNFONT.googleName"}}</label>
+      <input type="text" name="google-name" placeholder="e.g. Roboto">
+
+      <label>{{localize "JT.OWNFONT.googleUrl"}}</label>
+      <input type="text" name="google-url" placeholder="https://fonts.googleapis.com/css2?family=Roboto">
+    </div>
+      <button type="button" class="add-google-font-btn" data-action="addGoogleFont">
+        <i class="fa-solid fa-plus"></i> {{localize "JT.OWNFONT.add"}}
+      </button>   
+  </section>
+  <hr>
+  <section class="add-local-font">
+    <h3>{{localize "JT.OWNFONT.addLocalFont"}}</h3>
+    <div class="form-fields">
+      <label>{{localize "JT.OWNFONT.localName"}}</label>
+      <input type="text" name="local-name" placeholder="e.g. MyLocalFont">
+      <label>{{localize "JT.OWNFONT.localPath"}}</label>
+      <div class="file-picker">
+        <input type="text" name="local-path" placeholder="modules/journal-styler/assets/fonts/MyFont.ttf">
+        <button type="button" class="file-picker-btn" data-action="browse" data-type="font">
+          <i class="fa-solid fa-folder-open"></i>
+        </button>
+      </div>
+    </div>
+      <button type="button" class="add-local-font-btn" data-action="addLocalFont">
+        <i class="fa-solid fa-plus"></i> {{localize "JT.OWNFONT.add"}}
+      </button>  
+  </section>
+  <hr>
+  <footer class="dialog-buttons">
+    <button type="button" class="save-btn" data-action="save">
+      <i class="fa-solid fa-save"></i> {{localize "JT.OWNFONT.save"}}
+    </button>
+  </footer>
+</div>

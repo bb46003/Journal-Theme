@@ -16,7 +16,7 @@ export class FontSizeProseMirrorMenu extends foundry.prosemirror.ProseMirrorMenu
   }
 
   #setCustomListeners(menu) {
-    menu.querySelectorAll("select[data-action=setFontSize]").forEach(select => {
+    menu.querySelectorAll("select[data-action=setFontSize]").forEach((select) => {
       select.addEventListener("change", this.#onFontSizeChange.bind(this));
     });
   }
@@ -32,7 +32,7 @@ export class FontSizeProseMirrorMenu extends foundry.prosemirror.ProseMirrorMenu
     const _preserveAttr = this.#getPreserve(state, markType, selection);
 
     const spanStyle = Object.assign(document.createElement("span"), {
-      style: _preserveAttr.style
+      style: _preserveAttr.style,
     }).style;
 
     if (spanStyle["font-size"] === selectedSize) {
@@ -41,21 +41,27 @@ export class FontSizeProseMirrorMenu extends foundry.prosemirror.ProseMirrorMenu
       spanStyle.setProperty("font-size", selectedSize);
     }
 
-    modifyMark(markType, state, dispatch, {
-      _preserve: {
-        ..._preserveAttr,
-        style: spanStyle.cssText,
+    modifyMark(
+      markType,
+      state,
+      dispatch,
+      {
+        _preserve: {
+          ..._preserveAttr,
+          style: spanStyle.cssText,
+        },
       },
-    }, {
-      includeWhitespace: false,
-      modify: spanStyle.length >= 1,
-    });
+      {
+        includeWhitespace: false,
+        modify: spanStyle.length >= 1,
+      },
+    );
   }
 
   #getPreserve(state, markType, selection) {
     let _preserve = {};
-    state.doc.nodesBetween(selection.from, selection.to, node => {
-      const mark = node.marks.find(m => m.type.name === markType.name && m.attrs?._preserve);
+    state.doc.nodesBetween(selection.from, selection.to, (node) => {
+      const mark = node.marks.find((m) => m.type.name === markType.name && m.attrs?._preserve);
       if (mark) {
         _preserve = mark.attrs._preserve;
         return false;

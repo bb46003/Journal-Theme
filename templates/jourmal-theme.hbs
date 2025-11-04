@@ -1,0 +1,27 @@
+<div>
+  <label>{{localize "JT.JOURNAL.SelectYourTheme"}}</label>
+  <div>
+
+    <label>{{localize "JT.THEME.journalTheme"}}</label>
+    <select id="theme">
+      {{selectOptions listtheme selected=selectedTheme localize=true}}
+    </select>
+  </div>
+  {{#if (eq ownership 3)}}
+    <div>
+      <label>{{localize "JT.THEME.journalHeaderFont"}}</label>
+      <select id="headerFont">
+        <option value="">{{localize "JT.THEME.defaultFont"}}</option>
+        {{selectOptions headerFont selected=selectedHederFont localize=true}}
+      </select>
+    </div>
+    <div>
+      <label>{{localize "JT.THEME.journalBodyFont"}}</label>
+      <select id="bodyFont">
+        <option value="">{{localize "JT.THEME.defaultFont"}}</option>
+        {{selectOptions textFont selected=selectedBodyFont localize=true}}
+      </select>
+    </div>
+  {{/if}}
+  <button data-action="applyTheme">{{localize "JT.APPLY"}}</button>
+</div>

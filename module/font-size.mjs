@@ -31,7 +31,7 @@ export default class FontSize {
     }
 
     li.append(select);
-    const fontLi = menu.querySelector('li.text:has(> button.pm-dropdown.fonts)');
+    const fontLi = menu.querySelector("li.text:has(> button.pm-dropdown.fonts)");
     fontLi.insertAdjacentElement("afterend", li);
   }
 }

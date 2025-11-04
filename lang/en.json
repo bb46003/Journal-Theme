@@ -33,7 +33,24 @@
     "MENU": {
       "ThemeConfig": "Set default Theme and fots for all new Jurnals",
       "OpenDialog": "Open Theme selector dialog",
-      "ThemeConfigHint": "This settings will apply to all Jurnal where users do not change Theme"
+      "ThemeConfigHint": "This settings will apply to all Jurnal where users do not change Theme",
+      "addOwnFonts": "Add Your Fonts",
+      "OpenFontDialog": "Open add Font Dialog",
+      "ownFontsHInt": "You can add your own Fonts from Google Font or local files"
+    },
+    "OWNFONT": {
+      "addedFonts": "Here you can load your own Fonts, ether local by file or Google Font ",
+      "remove": "Remove Font",
+      "noFonts": "No Font added",
+      "addGoogleFont": "Your Own fonts from Google Font",
+      "googleName": "Font Name",
+      "googleUrl": "Font URL",
+      "add": "Add field",
+      "addLocalFont": "Yor Own Local Font",
+      "localName": "Font Name",
+      "localPath": "Path to font file",
+      "save": "Save and Add Fonts",
+      "title": "Adding own Fonts"
     }
   }
 }

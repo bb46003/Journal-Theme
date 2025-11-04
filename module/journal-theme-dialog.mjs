@@ -7,8 +7,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
       width: 550,
       height: "auto",
     },
-    template:
-      "modules/journal-styler/jourmal-theme.hbs",
+    template: "modules/journal-styler/templates/jourmal-theme.hbs",
     window: { title: "JT.JURNAL.title" },
   };
 
@@ -18,36 +17,34 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     const journalUuid = this.options.uuid;
     const journalEntry = await fromUuid(journalUuid);
     let ownership = journalEntry?.ownership[userID];
-    if(ownership === undefined && game.user.isGM){
-      ownership = 3;  
+    if (ownership === undefined && game.user.isGM) {
+      ownership = 3;
     }
-    const headerFont = Object.fromEntries(
-      Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))    
-    );
-    const gmDefault =
-      game.settings.get("journal-styler", "GMdefoultTheme") || {};
+    const headerFont = Object.keys(CONFIG.JT?.JournalHeaderFont || {});
+    const addedFonts = Object.keys(game.settings.get("journal-styler", "addedFonts") || {});
+    const allFontNames = [...new Set([...headerFont, ...addedFonts])].sort((a, b) => a.localeCompare(b));
+    const allFontsObj = Object.fromEntries(allFontNames.map((name) => [name, name]));
+    const gmDefault = game.settings.get("journal-styler", "GMdefoultTheme") || {};
     const jtFlags = journalEntry?.flags?.JT || {};
     const flags = jtFlags[userID] ?? jtFlags["default"] ?? {};
     const flagTheme = flags.theme ?? gmDefault.theme;
     const flagHeaderFont = flags.headerFont ?? gmDefault.headerFont;
     const flagBodyFont = flags.bodyFont ?? gmDefault.bodyFont;
     const data = {
-      listtheme: CONFIG.JT.sheetTheme, // or whatever list you have
-      headerFont: headerFont, // header fonts
-      textFont: headerFont,
+      listtheme: CONFIG.JT.sheetTheme,
+      headerFont: allFontsObj,
+      textFont: allFontsObj,
       selectedTheme: flagTheme,
       selectedHederFont: flagHeaderFont,
-      selectedBodyFont: flagBodyFont, // body fonts
-      ownership: ownership
+      selectedBodyFont: flagBodyFont,
+      ownership: ownership,
     };
-
     let html;
     if (game.release.generation > 12) {
       html = foundry.applications.handlebars.renderTemplate(path, data);
     } else {
       html = renderTemplate(path, data);
     }
-
     return html;
   }
 
@@ -77,21 +74,19 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
         updateData[`flags.JT.${userID}.${key}`] = value;
       });
       if (Object.keys(updateData).length > 0) {
-        if((journalEntry.ownership[userID] < 3) && isGM === false){
+        if (journalEntry.ownership[userID] < 3 && isGM === false) {
           game.modules.get("journal-styler").socketHandler.emit({
             type: "setFlag",
             journalUuid: journalUuid,
-            updateData: updateData
+            updateData: updateData,
           });
-
-        }else{
+        } else {
           await journalEntry.update(updateData);
         }
       }
     } else {
       if (Object.keys(newValues).length > 0) {
-        const currentDefaults =
-          game.settings.get("journal-styler", "GMdefoultTheme") || {};
+        const currentDefaults = game.settings.get("journal-styler", "GMdefoultTheme") || {};
         const merged = { ...currentDefaults, ...newValues };
         await game.settings.set("journal-styler", "GMdefoultTheme", merged);
       }

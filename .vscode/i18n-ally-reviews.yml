@@ -1462,3 +1462,183 @@ reviews:
             suggestion: ''
             type: approve
             time: '2025-10-24T08:23:23.882Z'
+  JT.OWNFONT.addedFonts:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: S8rf5GM8ASy3NLLBJE_8t
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:40:30.705Z'
+  JT.OWNFONT.remove:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: GEcz9EX9FzO_3bPHmeWwY
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:40:50.992Z'
+  JT.OWNFONT.noFonts:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 3Mq6V2EATTCSr7MPZ9aKl
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:44:46.686Z'
+  JT.OWNFONT.addGoogleFont:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: uQ4eAhkDFhK7gNmQi-joA
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:45:10.339Z'
+  JT.OWNFONT.googleName:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: dVC_nmAJ4aIFkhE_FdTAK
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:45:24.509Z'
+  JT.OWNFONT.googleUrl:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: TN7xuwBUQDeaew0k_9HLI
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:45:34.486Z'
+  JT.OWNFONT.add:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: UtSnXzuBYp8kHjZQMS1pW
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:46:35.586Z'
+  JT.OWNFONT.addLocalFont:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: AYR1i2exkPFBqutPJ1cHw
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:46:58.503Z'
+  JT.OWNFONT.localName:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 97dOSNpWiMep6jlFmpA-k
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:47:07.398Z'
+  JT.OWNFONT.localPath:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: USPW7OE77zo9gOMc_601d
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:47:20.534Z'
+  JT.OWNFONT.save:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: gG7zwx4Zj7FTG41izNN_c
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:47:35.393Z'
+  JT.OWNFONT.title:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 9s_8H-FL_eG3Aq4ky0hYe
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:48:15.290Z'
+  JT.MENU.addOwnFonts:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: cq3Gz_JhlsKltYiwzEP9p
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:52:32.436Z'
+  JT.MENU.OpenFontDialog:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: TDhBK5alQQwuGMF_-EVyr
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:52:51.191Z'
+  JT.MENU.ownFontsHInt:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: feca-tD_M-CiSX96qf1Qu
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-04T14:53:24.153Z'

@@ -1,22 +1,24 @@
-import { JT } from "./config.mjs";
-import { JournalThemeDialog } from "./journal-theme-dialog.mjs";
-import { SocketHandler } from "./socketHandler.mjs";
-import FontSize from "./font-size.mjs";
+import { JT } from "./module/config.mjs";
+import { JournalThemeDialog } from "./module/journal-theme-dialog.mjs";
+import { SocketHandler } from "./module/socketHandler.mjs";
+import FontSize from "./module/font-size.mjs";
+import { OwnFontsDialog } from "./module/own-fonts-dialog.mjs";
+import addFonts from "./module/adding-font.mjs";
 
 Hooks.once("init", async function () {
   CONFIG.JT = JT;
   game.settings.register("journal-styler", "minOwnershipLevel", {
-    name: "JT.SETTING.MinOwnership", 
-    hint: "JT.SETTING.MinOwnershipHint", 
+    name: "JT.SETTING.MinOwnership",
+    hint: "JT.SETTING.MinOwnershipHint",
     scope: "world",
-    config: true, 
+    config: true,
     type: Number,
     choices: {
-      1: "Limited", 
+      1: "Limited",
       2: "Observer",
       3: "Owner",
     },
-    default: 1, 
+    default: 1,
   });
 
   game.settings.register("journal-styler", "GMdefoultTheme", {
@@ -26,141 +28,38 @@ Hooks.once("init", async function () {
     type: Object,
   });
 
-
   game.settings.registerMenu("journal-styler", "themeMenu", {
-    name: "JT.MENU.ThemeConfig", 
-    label: "JT.MENU.OpenDialog", 
-    hint: "JT.MENU.ThemeConfigHint", 
+    name: "JT.MENU.ThemeConfig",
+    label: "JT.MENU.OpenDialog",
+    hint: "JT.MENU.ThemeConfigHint",
     icon: "fas fa-palette",
-    type: JournalThemeDialog, 
-    restricted: true, 
+    type: JournalThemeDialog,
+    restricted: true,
   });
+  game.settings.registerMenu("journal-styler", "ownFonts", {
+    name: "JT.MENU.addOwnFonts",
+    label: "JT.MENU.OpenFontDialog",
+    hint: "JT.MENU.ownFontsHInt",
+    icon: "fas fa-palette",
+    type: OwnFontsDialog,
+    restricted: true,
+  });
+
+  game.settings.register("journal-styler", "addedFonts", {
+    scope: "world",
+    config: false,
+    default: {},
+    type: Object,
+  });
+
   registerHandlebarsHelpers();
-  const myPackage = game.modules.get("journal-styler"); 
+  const myPackage = game.modules.get("journal-styler");
   myPackage.socketHandler = new SocketHandler();
-
-
 });
 
-Hooks.once("ready", async function() {
-  
-  const progressContainer = document.createElement("div");
-  Object.assign(progressContainer.style, {
-    position: "fixed",
-    top: "10%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "300px",
-    height: "24px",
-    background: "rgba(0,0,0,0.4)",
-    border: "1px solid #999",
-    borderRadius: "8px",
-    zIndex: "99999",
-    backdropFilter: "blur(4px)",
-    overflow: "hidden",
-  });
-
-
-  const fillBar = document.createElement("div");
-  Object.assign(fillBar.style, {
-    height: "100%",
-    width: "0%",
-    background: "linear-gradient(90deg, #002fffff, #28048bff)",
-    transition: "width 0.3s ease",
-  });
-  const textOverlay = document.createElement("div");
-  Object.assign(textOverlay.style, {
-    position: "absolute",
-    top: "0",
-    left: "0",
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#fff",
-    fontSize: "12px",
-    fontFamily: "sans-serif",
-    pointerEvents: "none",
-    textShadow: "0 0 4px rgba(0,0,0,0.8)",
-  });
-  textOverlay.textContent = "Loading fonts...";
-
-
-  progressContainer.appendChild(fillBar);
-  progressContainer.appendChild(textOverlay);
-  document.body.appendChild(progressContainer);
-
-  const headerFont = Object.fromEntries(
-    Object.entries(CONFIG.JT.JournalHeaderFont).sort(([a], [b]) => a.localeCompare(b))
-  );
-  const fontNames = Object.keys(headerFont);
-  const total = fontNames.length;
-  let loaded = 0;
-
-  for (const fontName of fontNames) {
-    if (CONFIG.fontDefinitions && CONFIG.fontDefinitions[fontName]) {
-      loaded++;
-      const pct = Math.round((loaded / total) * 100);
-      fillBar.style.width = `${pct}%`;
-      textOverlay.textContent = `Loading fonts... (${loaded}/${total}) ${pct}%`;
-      continue;
-    }
-
-    try {
-      let cssUrl = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g, '+')}&display=swap`;
-      if (fontName === "UnifrakturCook") {
-        cssUrl = 'https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap';
-      }
-
-      const fontUrls = [];
-      if (fontName !== "Big Noodle Titling") {
-        const response = await fetch(cssUrl);
-        const cssText = await response.text();
-        const urlRegex = /url\(([^)]+\.woff2[^)]*)\)/g;
-        let match;
-        while ((match = urlRegex.exec(cssText)) !== null) {
-          fontUrls.push(match[1].replace(/['"]/g, ''));
-        }
-      } else {
-        fontUrls.push("modules/journal-styler/assets/font/big_noodle_titling.ttf");
-      }
-
-      if (fontUrls.length > 0) {
-        await foundry.applications.settings.menus.FontConfig.loadFont(fontName, {
-          editor: true,
-          fonts: [{
-            urls: fontUrls,
-            weight: "400",
-            style: "normal"
-          }]
-        });
-      }
-    } catch (err) {
-      console.warn(`Failed to load font ${fontName}:`, err);
-    }
-
-   
-    loaded++;
-    const pct = Math.round((loaded / total) * 100);
-    fillBar.style.width = `${pct}%`;
-    textOverlay.textContent = `Loading fonts... (${loaded}/${total}) ${pct}%`;
-  }
-
-  
-  fillBar.style.width = "100%";
-  textOverlay.textContent = "All fonts loaded ✔";
-  setTimeout(() => {
-    progressContainer.style.transition = "opacity 0.6s ease";
-    progressContainer.style.opacity = "0";
-    setTimeout(() => progressContainer.remove(), 600);
-  }, 800);
+Hooks.once("ready", async function () {
+  await addFonts();
 });
-
-
-
-
-
 
 Hooks.on("renderJournalEntrySheet", (html) => {
   let element;
@@ -173,17 +72,15 @@ Hooks.on("renderJournalEntrySheet", (html) => {
     uuid = html.document.uuid;
   }
   const userID = game.user.id;
-  const ownerShipSettings = game.settings.get(
-    "journal-styler",
-    "minOwnershipLevel",
-  );
-   const headerFont = CONFIG.JT.JournalHeaderFont;
+  const ownerShipSettings = game.settings.get("journal-styler", "minOwnershipLevel");
+  const headerFont = Object.keys(CONFIG.JT?.JournalHeaderFont || {});
+  const addedFonts = Object.keys(game.settings.get("journal-styler", "addedFonts") || {});
+  const allFontNames = [...new Set([...headerFont, ...addedFonts])].sort((a, b) => a.localeCompare(b));
+  const allFontsObj = Object.fromEntries(allFontNames.map((name) => [name, name]));
   const journalOwnerShip = html.document.ownership[userID];
   if (ownerShipSettings <= journalOwnerShip) {
     const header = element.querySelector(".window-header");
-    const bbuttenexist = element.querySelector(
-      ".header-control.icon.fa-solid.fa-palette",
-    );
+    const bbuttenexist = element.querySelector(".header-control.icon.fa-solid.fa-palette");
     if (bbuttenexist === null) {
       const title = header.querySelector("h1");
       const btn = document.createElement("button");
@@ -209,27 +106,23 @@ Hooks.on("renderJournalEntrySheet", (html) => {
   if (flagBodyFont !== "") {
     const pages = element.querySelectorAll(".journal-entry-pages");
     pages.forEach((page) => {
-      page.style.fontFamily = headerFont[flagBodyFont];
+      page.style.fontFamily = allFontsObj[flagBodyFont];
     });
-  }
-  else{
+  } else {
     const pages = element.querySelectorAll(".journal-entry-pages");
     pages.forEach((page) => {
       page.style.removeProperty("font-family");
     });
   }
   if (flagHeaderFont !== undefined) {
-    const elements = element.querySelectorAll(
-      `.window-title, .title, .sidebar.journal-sidebar.flexcol, .page-heading, .journal-page-header h1, text level1 page active, [data-anchor^="header-"],.heading-link, .heading `,
-    );
+    const elements = element.querySelectorAll(`.window-title, .title, .sidebar.journal-sidebar.flexcol, .page-heading, .journal-page-header h1, text level1 page active, [data-anchor^="header-"],.heading-link, .heading `);
     elements.forEach((element) => {
       if (flagHeaderFont !== "") {
-        element.style.setProperty("font-family", headerFont[flagHeaderFont], "important");
-      } 
+        element.style.setProperty("font-family", allFontsObj[flagHeaderFont], "important");
+      }
     });
   }
   if (flagTheme !== undefined) {
-
     element.className = `application sheet journal-sheet journal-entry expanded ${flagTheme}`;
   }
 });
@@ -249,10 +142,15 @@ function registerHandlebarsHelpers() {
       return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
     },
   });
+  Handlebars.registerHelper("length", function (value) {
+    if (Array.isArray(value)) return value.length;
+    if (value && typeof value === "object") return Object.keys(value).length;
+    return 0;
+  });
 }
 
 Hooks.on("createProseMirrorEditor", (_uuid, plugins, _options) => {
-  console.log(plugins)
+  console.log(plugins);
   const Menu = FontSize.prosemirror.FontSizeProseMirrorMenu;
   const { defaultSchema } = foundry.prosemirror;
   const options = plugins.menu.options;
@@ -261,45 +159,37 @@ Hooks.on("createProseMirrorEditor", (_uuid, plugins, _options) => {
 
 Hooks.on("getProseMirrorMenuDropDowns", (_app, dropdowns) => {
   const dropdownArray = Array.isArray(dropdowns) ? dropdowns : Object.values(dropdowns);
-  const formatDropdown = dropdownArray.find(d => d.cssClass === "format");
+  const formatDropdown = dropdownArray.find((d) => d.cssClass === "format");
   if (!formatDropdown) return;
   const headingsEntry = formatDropdown.entries[0];
   const headingsDropdown = {
     cssClass: "headings-only",
     entries: headingsEntry.children,
-    title: headingsEntry.title || "Headings"
+    title: headingsEntry.title || "Headings",
   };
-  formatDropdown.entries.shift()
+  formatDropdown.entries.shift();
   dropdownArray.push(headingsDropdown);
   if (!Array.isArray(dropdowns)) {
     Object.assign(dropdowns, [headingsDropdown]);
   }
- const inline = formatDropdown.entries[1].children;
-const typesToExtract = ["italic", "bold", "underline"];
-const extractedItems = inline.filter(element => typesToExtract.includes(element.action));
-formatDropdown.entries[1].children = inline.filter(element => !typesToExtract.includes(element.action));
-const iconMap = {
-  bold: "<i class='fa-solid fa-bold fa-fw'></i>",
-  italic: "<i class='fa-solid fa-italic fa-fw'></i>",
-  underline: "<i class='fa-solid fa-underline fa-fw'></i>"
-};
-
-// Convert to _app.items format with icons
-const convertedItems = extractedItems.map(e => ({
-  action: e.action,
-  cmd: e.cmd,
-  cssClass: "pm-button",
-  icon: iconMap[e.action] || "",
-  scope: "",
-  title: e.title
-}));
-
-// Push into _app.items
-if (!_app.items) _app.items = [];
-_app.items.push(...convertedItems);
-
-console.log("Converted items with icons:", convertedItems);
-_app.items.push(...extractedItems);
-
+  const inline = formatDropdown.entries[1].children;
+  const typesToExtract = ["italic", "bold", "underline"];
+  const extractedItems = inline.filter((element) => typesToExtract.includes(element.action));
+  formatDropdown.entries[1].children = inline.filter((element) => !typesToExtract.includes(element.action));
+  const iconMap = {
+    bold: "<i class='fa-solid fa-bold fa-fw'></i>",
+    italic: "<i class='fa-solid fa-italic fa-fw'></i>",
+    underline: "<i class='fa-solid fa-underline fa-fw'></i>",
+  };
+  const convertedItems = extractedItems.map((e) => ({
+    action: e.action,
+    cmd: e.cmd,
+    cssClass: "pm-button",
+    icon: iconMap[e.action] || "",
+    scope: "",
+    title: e.title,
+  }));
+  if (!_app.items) _app.items = [];
+  _app.items.push(...convertedItems);
+  _app.items.push(...extractedItems);
 });
-
