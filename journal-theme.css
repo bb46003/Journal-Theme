@@ -1278,7 +1278,7 @@
 .journal-entry.starburst .journal-entry-content {
   background: linear-gradient(rgba(0, 0, 96, 0.75), rgba(0, 0, 32, 0.5)), url(assets/Fond_Files/fond_cosmic2.webp), url(assets/theme/darkbluenoise.webp);
   background-repeat: no-repeat, no-repeat, repeat;
-  background-size: auto, 25%, auto;
+  background-size: auto, 150%, auto;
   border: solid 3px #ffffff;
   border-radius: 25px;
   margin-left: 5px;
