@@ -22,7 +22,7 @@ In the **journal header**, you’ll find a new **palette button** on the right:
 
 Clicking this button opens a **style selection dialog**, where you can configure three main elements:
 
-<img src="Redme screen shot/dialog.png">
+<img src="Redme screen shot/Dialog.png">
 
 ### 1. Theme  
 Themes define the **background image**, and default **header** and **body fonts** for the journal text.  
