@@ -2,7 +2,7 @@
   "JT": {
     "THEME": {
       "label": "Select your character sheet theme",
-      "default": "System default",
+      "default": "System Default",
       "emeraldcity": "Emerald City",
       "freedomcity": "Freedom City",
       "techblue": "Tech Blue",
@@ -18,42 +18,40 @@
       "journalHeaderFont": "Header Font",
       "journalBodyFont": "Body Font"
     },
-    "JURNAL": {
-      "ThemeTooltip": "Click to open Theme and Font selector",
-      "title": "Theme Selector"
-    },
     "JOURNAL": {
-      "SelectYourTheme": "Select Journal Theme, Header Font, and Body Text Font"
+      "ThemeTooltip": "Click to open the Theme and Font selector",
+      "title": "Theme Selector",
+      "SelectYourTheme": "Select a Journal Theme, Header Font, and Body Font"
     },
     "APPLY": "Apply",
     "SETTING": {
-      "MinOwnership": "Set minimum Ownership to allow for User set own Theme",
-      "MinOwnershipHint": "When user will open Jurnal in top header he will notice additional button allow to set own Theme and fonts. It will affext only THIS user."
+      "MinOwnership": "Set minimum ownership level to allow users to set their own theme",
+      "MinOwnershipHint": "When a user opens a Journal, they’ll see an extra button in the top header to set their own theme and fonts. This will affect only that user."
     },
     "MENU": {
-      "ThemeConfig": "Set default Theme and fots for all new Jurnals",
-      "OpenDialog": "Open Theme selector dialog",
-      "ThemeConfigHint": "This settings will apply to all Jurnal where users do not change Theme",
+      "ThemeConfig": "Set default theme and fonts for all new Journals",
+      "OpenDialog": "Open Theme Selector Dialog",
+      "ThemeConfigHint": "These settings will apply to all Journals where users haven’t changed the theme.",
       "addOwnFonts": "Add Your Fonts",
-      "OpenFontDialog": "Open add Font Dialog",
-      "ownFontsHInt": "You can add your own Fonts from Google Font or local files"
+      "OpenFontDialog": "Open Add Font Dialog",
+      "ownFontsHint": "You can add your own fonts from Google Fonts or local files."
     },
     "OWNFONT": {
-      "addedFonts": "Here you can load your own Fonts, ether local by file or Google Font ",
+      "addedFonts": "Here you can load your own fonts, either from local files or Google Fonts.",
       "remove": "Remove Font",
-      "noFonts": "No Font added",
-      "addGoogleFont": "Your Own fonts from Google Font",
+      "noFonts": "No fonts added",
+      "addGoogleFont": "Add Fonts from Google Fonts",
       "googleName": "Font Name",
       "googleUrl": "Font URL",
-      "add": "Add field",
-      "addLocalFont": "Yor Own Local Font",
+      "add": "Add Field",
+      "addLocalFont": "Add Local Font",
       "localName": "Font Name",
-      "localPath": "Path to font file",
+      "localPath": "Path to Font File",
       "save": "Save and Add Fonts",
-      "title": "Adding own Fonts"
+      "title": "Add Your Own Fonts"
     },
-    "WARRNING":{
-      "errorOnFontLoading": "Font {font} face error on loading"
+    "WARNING": {
+      "errorOnFontLoading": "Error loading font: {font}"
     }
   }
 }

@@ -8,7 +8,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
       height: "auto",
     },
     template: "modules/journal-styler/templates/jourmal-theme.hbs",
-    window: { title: "JT.JURNAL.title" },
+    window: { title: "JT.JOURNAL.title" },
   };
 
   async _renderHTML() {
