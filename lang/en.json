@@ -51,6 +51,9 @@
       "localPath": "Path to font file",
       "save": "Save and Add Fonts",
       "title": "Adding own Fonts"
+    },
+    "WARRNING":{
+      "errorOnFontLoading": "Font {font} face error on loading"
     }
   }
 }
