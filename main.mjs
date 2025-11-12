@@ -39,7 +39,7 @@ Hooks.once("init", async function () {
   game.settings.registerMenu("journal-styler", "ownFonts", {
     name: "JT.MENU.addOwnFonts",
     label: "JT.MENU.OpenFontDialog",
-    hint: "JT.MENU.ownFontsHInt",
+    hint: "JT.MENU.ownFontsHint",
     icon: "fas fa-palette",
     type: OwnFontsDialog,
     restricted: true,
@@ -86,7 +86,7 @@ Hooks.on("renderJournalEntrySheet", (html) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.classList.add("header-control", "icon", "fa-solid", "fa-palette");
-      btn.dataset.tooltip = game.i18n.localize("JT.JURNAL.ThemeTooltip");
+      btn.dataset.tooltip = game.i18n.localize("JT.JOURNAL.ThemeTooltip");
       title.insertAdjacentElement("afterend", btn);
       btn.addEventListener("click", (ev) => {
         ev.stopPropagation();
