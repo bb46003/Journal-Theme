@@ -45,17 +45,12 @@ export default async function addFonts() {
   progressContainer.appendChild(textOverlay);
   document.body.appendChild(progressContainer);
 
-
   const headerFont = Object.fromEntries(Object.entries(CONFIG.JT.JournalHeaderFont || {}).sort(([a], [b]) => a.localeCompare(b)));
   const addedFonts = Object.fromEntries(Object.entries(game.settings.get("journal-styler", "addedFonts") || {}).sort(([a], [b]) => a.localeCompare(b)));
-  const fontEntries = [
-    ...Object.keys(headerFont).map((name) => ({ name, type: "header" })),
-    ...Object.entries(addedFonts).map(([name, font]) => ({ name, ...font })),
-  ];
+  const fontEntries = [...Object.keys(headerFont).map((name) => ({ name, type: "header" })), ...Object.entries(addedFonts).map(([name, font]) => ({ name, ...font }))];
 
   const total = fontEntries.length;
   let loaded = 0;
-
 
   const updateProgress = () => {
     const pct = Math.round((loaded / total) * 100);
@@ -118,17 +113,14 @@ export default async function addFonts() {
       }
     } catch (err) {
       console.warn(`Failed to load font ${font.name}:`, err);
-      ui.notifications.warn(game.i18n.format("JT.WARRNING.errorOnFontLoading", {font:font.name}));
-
+      ui.notifications.warn(game.i18n.format("JT.WARRNING.errorOnFontLoading", { font: font.name }));
     } finally {
       loaded++;
       updateProgress();
     }
   }
 
-
   await Promise.all(fontEntries.map((font) => loadOneFont(font)));
-
 
   fillBar.style.width = "100%";
   textOverlay.textContent = "All fonts loaded ✔";

@@ -7,25 +7,33 @@ import addFonts from "./module/adding-font.mjs";
 
 Hooks.once("init", async function () {
   CONFIG.JT = JT;
+  const fields = foundry.data.fields;
   game.settings.register("journal-styler", "minOwnershipLevel", {
     name: "JT.SETTING.MinOwnership",
     hint: "JT.SETTING.MinOwnershipHint",
     scope: "world",
     config: true,
-    type: Number,
-    choices: {
-      1: "Limited",
-      2: "Observer",
-      3: "Owner",
-    },
-    default: 1,
+    type: new fields.StringField({
+      required: true,
+      choices: {
+        1: "Limited",
+        2: "Observer",
+        3: "Owner",
+      },
+      initial: "1",
+      trim: true,
+    }),
   });
 
   game.settings.register("journal-styler", "GMdefoultTheme", {
     scope: "world",
     config: false,
     default: {},
-    type: Object,
+    type: new fields.SchemaField({
+      bodyFont: new fields.StringField(),
+      headerFont: new fields.StringField(),
+      theme: new fields.StringField(),
+    }),
   });
 
   game.settings.registerMenu("journal-styler", "themeMenu", {
@@ -48,8 +56,13 @@ Hooks.once("init", async function () {
   game.settings.register("journal-styler", "addedFonts", {
     scope: "world",
     config: false,
-    default: {},
-    type: Object,
+    type: new fields.ArrayField(
+      new fields.SchemaField({
+        fontType: new fields.StringField(),//no need for validation code set this value
+        name: new fields.StringField(),
+        url: new fields.StringField(),//becose we allow local fonts as well, it will be hard to findany valid chcek
+      }),
+    ),
   });
 
   registerHandlebarsHelpers();
@@ -146,6 +159,9 @@ function registerHandlebarsHelpers() {
     if (Array.isArray(value)) return value.length;
     if (value && typeof value === "object") return Object.keys(value).length;
     return 0;
+  });
+  Handlebars.registerHelper("log", function (value) {
+    console.log(value);
   });
 }
 

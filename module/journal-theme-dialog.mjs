@@ -1,4 +1,6 @@
-export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
+const { api, sheets } = foundry.applications;
+
+export class JournalThemeDialog extends api.HandlebarsApplicationMixin(api.Application) {
   static DEFAULT_OPTIONS = {
     actions: {
       applyTheme: JournalThemeDialog.#applyTheme,
@@ -7,12 +9,17 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
       width: 550,
       height: "auto",
     },
-    template: "modules/journal-styler/templates/jourmal-theme.hbs",
     window: { title: "JT.JOURNAL.title" },
   };
+  static PARTS = {
+    main: {
+      id: "main",
+      template: "modules/journal-styler/templates/jourmal-theme.hbs",
+    },
+  };
 
-  async _renderHTML() {
-    const path = this.options.template;
+  async _prepareContext() {
+    const context = {};
     const userID = game.user.id;
     const journalUuid = this.options.uuid;
     const journalEntry = await fromUuid(journalUuid);
@@ -30,26 +37,14 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
     const flagTheme = flags.theme ?? gmDefault.theme;
     const flagHeaderFont = flags.headerFont ?? gmDefault.headerFont;
     const flagBodyFont = flags.bodyFont ?? gmDefault.bodyFont;
-    const data = {
-      listtheme: CONFIG.JT.sheetTheme,
-      headerFont: allFontsObj,
-      textFont: allFontsObj,
-      selectedTheme: flagTheme,
-      selectedHederFont: flagHeaderFont,
-      selectedBodyFont: flagBodyFont,
-      ownership: ownership,
-    };
-    let html;
-    if (game.release.generation > 12) {
-      html = foundry.applications.handlebars.renderTemplate(path, data);
-    } else {
-      html = renderTemplate(path, data);
-    }
-    return html;
-  }
-
-  async _replaceHTML(result, html) {
-    html.innerHTML = result;
+    context.listtheme = CONFIG.JT.sheetTheme;
+    context.headerFont = allFontsObj;
+    context.textFont = allFontsObj;
+    context.selectedTheme = flagTheme;
+    context.selectedHederFont = flagHeaderFont;
+    context.selectedBodyFont = flagBodyFont;
+    context.ownership = ownership;
+    return context;
   }
 
   static async #applyTheme() {
@@ -88,6 +83,7 @@ export class JournalThemeDialog extends foundry.applications.api.ApplicationV2 {
       if (Object.keys(newValues).length > 0) {
         const currentDefaults = game.settings.get("journal-styler", "GMdefoultTheme") || {};
         const merged = { ...currentDefaults, ...newValues };
+        console.log(merged);
         await game.settings.set("journal-styler", "GMdefoultTheme", merged);
       }
     }

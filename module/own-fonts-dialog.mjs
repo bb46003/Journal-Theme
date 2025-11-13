@@ -1,6 +1,7 @@
 import addFonts from "./adding-font.mjs";
+const { api, sheets } = foundry.applications;
 
-export class OwnFontsDialog extends foundry.applications.api.ApplicationV2 {
+export class OwnFontsDialog extends api.HandlebarsApplicationMixin(api.Application) {
   static DEFAULT_OPTIONS = {
     actions: {
       save: OwnFontsDialog.#save,
@@ -14,19 +15,21 @@ export class OwnFontsDialog extends foundry.applications.api.ApplicationV2 {
       width: 550,
       height: "auto",
     },
-    template: "modules/journal-styler/templates/own-font.hbs",
+
     window: { title: "JT.OWNFONT.title" },
   };
+  static PARTS = {
+    main: {
+      id: "main",
+      template: "modules/journal-styler/templates/own-font.hbs",
+    },
+  };
 
-  async _renderHTML() {
-    const addedFonts = Object.fromEntries(Object.entries(game.settings.get("journal-styler", "addedFonts")).sort(([a], [b]) => a.localeCompare(b)));
-    const path = this.options.template;
-    const html = game.release.generation > 12 ? await foundry.applications.handlebars.renderTemplate(path, addedFonts) : await renderTemplate(path, addedFonts);
-    return html;
-  }
-
-  async _replaceHTML(result, html) {
-    html.innerHTML = result;
+  async _prepareContext() {
+    const storedFonts = game.settings.get("journal-styler", "addedFonts") || {};
+    const context = {};
+    context.fonts = Object.keys(storedFonts).length > 0 ? Object.fromEntries(Object.entries(storedFonts).sort(([a], [b]) => a.localeCompare(b))) : {};
+    return context;
   }
 
   static #addGoogleFont(event, button) {
@@ -90,8 +93,8 @@ export class OwnFontsDialog extends foundry.applications.api.ApplicationV2 {
     const name = button.closest("[data-name]")?.dataset.name;
     if (!name) return;
     const fonts = foundry.utils.duplicate(game.settings.get("journal-styler", "addedFonts"));
-    delete fonts[name];
-    await game.settings.set("journal-styler", "addedFonts", fonts);
+    const updatedFonts = fonts.filter((font) => font.name !== name);
+    await game.settings.set("journal-styler", "addedFonts", updatedFonts);
     this.render(true);
   }
 
@@ -99,8 +102,8 @@ export class OwnFontsDialog extends foundry.applications.api.ApplicationV2 {
     const name = button.closest("[data-name]")?.dataset.name;
     if (!name) return;
     const fonts = foundry.utils.duplicate(game.settings.get("journal-styler", "addedFonts"));
-    delete fonts[name];
-    await game.settings.set("journal-styler", "addedFonts", fonts);
+    const updatedFonts = fonts.filter((font) => font.name !== name);
+    await game.settings.set("journal-styler", "addedFonts", updatedFonts);
     this.render(true);
   }
 
@@ -119,7 +122,7 @@ export class OwnFontsDialog extends foundry.applications.api.ApplicationV2 {
 
   static async #save(event, button) {
     const html = event.currentTarget;
-    const fonts = {};
+    const fonts = game.settings.get("journal-styler", "addedFonts");
     html.querySelectorAll(".form-fields").forEach((entry) => {
       const googleNameInput = entry.querySelector("input[name='google-name']");
       const googleUrlInput = entry.querySelector("input[name='google-url']");
@@ -127,7 +130,7 @@ export class OwnFontsDialog extends foundry.applications.api.ApplicationV2 {
         const name = googleNameInput.value.trim();
         const url = googleUrlInput.value.trim();
         if (name && url) {
-          fonts[name] = { type: "google", name, url };
+          fonts.push({ fontType: "google", name: name, url: url });
         }
         return;
       }
@@ -137,7 +140,7 @@ export class OwnFontsDialog extends foundry.applications.api.ApplicationV2 {
         const name = localNameInput.value.trim();
         const path = localPathInput.value.trim();
         if (name && path) {
-          fonts[name] = { type: "local", name, path };
+          fonts.push({ fontType: "local", name: name, url: path });
         }
       }
     });
