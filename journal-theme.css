@@ -1520,3 +1520,6 @@
     max-height: calc(100vh - 80px);
   }
 }
+.file-picker {
+  display: flex;
+}

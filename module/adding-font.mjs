@@ -61,7 +61,6 @@ export default async function addFonts() {
   async function loadOneFont(font) {
     try {
       if (CONFIG.fontDefinitions && CONFIG.fontDefinitions[font.name]) {
-        loaded++;
         updateProgress();
         return;
       }

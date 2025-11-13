@@ -3,8 +3,9 @@ const { api, sheets } = foundry.applications;
 
 export class OwnFontsDialog extends api.HandlebarsApplicationMixin(api.Application) {
   static DEFAULT_OPTIONS = {
+    tag: "form",
+    classes: ["standard-form"],
     actions: {
-      save: OwnFontsDialog.#save,
       addLocalFont: OwnFontsDialog.#addLocalFont,
       addGoogleFont: OwnFontsDialog.#addGoogleFont,
       removeLocalFont: OwnFontsDialog.#removeLocalFont,
@@ -16,12 +17,18 @@ export class OwnFontsDialog extends api.HandlebarsApplicationMixin(api.Applicati
       height: "auto",
     },
 
+    form: {
+      closeOnSubmit: true,
+      handler: OwnFontsDialog.#onSubmit,
+    },
     window: { title: "JT.OWNFONT.title" },
   };
   static PARTS = {
-    main: {
-      id: "main",
+    config: {
       template: "modules/journal-styler/templates/own-font.hbs",
+    },
+    footer: {
+      template: "templates/generic/form-footer.hbs",
     },
   };
 
@@ -29,6 +36,7 @@ export class OwnFontsDialog extends api.HandlebarsApplicationMixin(api.Applicati
     const storedFonts = game.settings.get("journal-styler", "addedFonts") || {};
     const context = {};
     context.fonts = Object.keys(storedFonts).length > 0 ? Object.fromEntries(Object.entries(storedFonts).sort(([a], [b]) => a.localeCompare(b))) : {};
+    context.buttons = [{ type: "submit", icon: "fa-solid fa-save", label: "Save Changes" }];
     return context;
   }
 
@@ -120,32 +128,57 @@ export class OwnFontsDialog extends api.HandlebarsApplicationMixin(api.Applicati
     return fp.browse();
   }
 
-  static async #save(event, button) {
-    const html = event.currentTarget;
-    const fonts = game.settings.get("journal-styler", "addedFonts");
-    html.querySelectorAll(".form-fields").forEach((entry) => {
-      const googleNameInput = entry.querySelector("input[name='google-name']");
-      const googleUrlInput = entry.querySelector("input[name='google-url']");
-      if (googleNameInput && googleUrlInput) {
-        const name = googleNameInput.value.trim();
-        const url = googleUrlInput.value.trim();
-        if (name && url) {
-          fonts.push({ fontType: "google", name: name, url: url });
-        }
-        return;
+  static async #onSubmit(event, form, formData) {
+    let googleFontsName = formData.object["google-name"];
+    if (!Array.isArray(googleFontsName)) googleFontsName = [googleFontsName];
+    let googleFontsURL = formData.object["google-url"];
+    if (!Array.isArray(googleFontsURL)) googleFontsURL = [googleFontsURL];
+    let localFontsName = formData.object["local-name"];
+    if (!Array.isArray(localFontsName)) localFontsName = [localFontsName];
+    let localFontsURL = formData.object["local-path"];
+    if (!Array.isArray(localFontsURL)) localFontsURL = [localFontsURL];
+    let fonts = game.settings.get("journal-styler", "addedFonts");
+    googleFontsURL.forEach((url, index) => {
+      if (url && googleFontsName[index]) {
+        fonts.push({ fontType: "google", name: googleFontsName[index], url: url });
       }
-      const localNameInput = entry.querySelector("input[name='local-name']");
-      const localPathInput = entry.querySelector("input[name='local-path']");
-      if (localNameInput && localPathInput) {
-        const name = localNameInput.value.trim();
-        const path = localPathInput.value.trim();
-        if (name && path) {
-          fonts.push({ fontType: "local", name: name, url: path });
-        }
+    });
+    localFontsURL.forEach((url, index) => {
+      if (url && localFontsName[index]) {
+        fonts.push({ fontType: "local", name: localFontsName[index], url: url });
       }
     });
     await game.settings.set("journal-styler", "addedFonts", fonts);
     this.close();
     await addFonts();
   }
+}
+
+async function save2(event, button) {
+  const html = event.currentTarget;
+  const fonts = game.settings.get("journal-styler", "addedFonts");
+  html.querySelectorAll(".form-fields").forEach((entry) => {
+    const googleNameInput = entry.querySelector("input[name='google-name']");
+    const googleUrlInput = entry.querySelector("input[name='google-url']");
+    if (googleNameInput && googleUrlInput) {
+      const name = googleNameInput.value.trim();
+      const url = googleUrlInput.value.trim();
+      if (name && url) {
+        fonts.push({ fontType: "google", name: name, url: url });
+      }
+      return;
+    }
+    const localNameInput = entry.querySelector("input[name='local-name']");
+    const localPathInput = entry.querySelector("input[name='local-path']");
+    if (localNameInput && localPathInput) {
+      const name = localNameInput.value.trim();
+      const path = localPathInput.value.trim();
+      if (name && path) {
+        fonts.push({ fontType: "local", name: name, url: path });
+      }
+    }
+  });
+  await game.settings.set("journal-styler", "addedFonts", fonts);
+  this.close();
+  await addFonts();
 }
