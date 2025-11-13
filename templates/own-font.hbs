@@ -1,19 +1,19 @@
 <div class="own-fonts-dialog">
   <section class="added-fonts">
     <span>{{localize "JT.OWNFONT.addedFonts"}}</span>
-    {{#if (gt (length this) 0)}}
+    {{#if (gt (length fonts) 0)}}
       <ul class="font-list">
-        {{#each this as |font name|}}
-          <li class="font-entry" data-name="{{name}}" data-type="{{font.type}}">
-            <strong>{{name}}</strong>
-            {{#if (eq font.type "google")}}
+        {{#each fonts as |font name|}}
+          <li class="font-entry" data-name="{{font.name}}" data-type="{{font.fontType}}">
+            <strong>{{font.name}}</strong>
+            {{#if (eq font.fontType "google")}}
               <span class="font-type">[Google Font]</span>
               <code>{{font.url}}</code>
             {{else}}
               <span class="font-type">[Local Font]</span>
-              <code>{{font.path}}</code>
+              <code>{{font.url}}</code>
             {{/if}}
-            <button type="button" class="remove-font" data-action="{{#if (eq font.type 'google')}}removeGoogleFont{{else}}removeLocalFont{{/if}}">
+            <button type="button" class="remove-font" data-action="{{#if (eq font.fontType 'google')}}removeGoogleFont{{else}}removeLocalFont{{/if}}">
               <i class="fa-solid fa-trash"></i> {{localize "JT.OWNFONT.remove"}}
             </button>
           </li>
