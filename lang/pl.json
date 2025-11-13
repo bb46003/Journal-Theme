@@ -1,7 +1,7 @@
 {
   "JT": {
     "THEME": {
-      "label": "Select your character sheet theme",
+      "label": "Wybierz motyws swojego Dziennika",
       "default": "System Default",
       "emeraldcity": "Emerald City",
       "freedomcity": "Freedom City",
@@ -19,39 +19,43 @@
       "journalBodyFont": "Body Font"
     },
     "JOURNAL": {
-      "ThemeTooltip": "Click to open the Theme and Font selector",
-      "title": "Theme Selector",
-      "SelectYourTheme": "Select a Journal Theme, Header Font, and Body Font"
+      "ThemeTooltip": "Kliknij, aby otworzyć selektor motywu i czcionki",
+      "title": "Selektor Motywu",
+      "SelectYourTheme": "Wybierz motyw dziennika, czcionkę nagłówka i czcionkę treści"
     },
-    "APPLY": "Apply",
+    "APPLY": "Zastosuj",
     "SETTING": {
-      "MinOwnership": "Set minimum ownership level to allow users to set their own theme",
-      "MinOwnershipHint": "When a user opens a Journal, they’ll see an extra button in the top header to set their own theme and fonts. This will affect only that user."
+      "MinOwnership": "Ustaw minimalny poziom własności, aby użytkownicy mogli ustawić własny motyw",
+      "MinOwnershipHint": "Gdy użytkownik otworzy dziennik, zobaczy dodatkowy przycisk w nagłówku, aby ustawić własny motyw i czcionki. Będzie to dotyczyć tylko tego użytkownika.",
+      "googleFonts": "[Czcionka Google]",
+      "localFonts": "[Czcionka lokalna]",
+      "fontUrlPlaceholder": "np. Roboto",
+      "localfontNamePlaceholder": "np. MojaCzcionkaLokalna"
     },
     "MENU": {
-      "ThemeConfig": "Set default theme and fonts for all new Journals",
-      "OpenDialog": "Open Theme Selector Dialog",
-      "ThemeConfigHint": "These settings will apply to all Journals where users haven’t changed the theme.",
-      "addOwnFonts": "Add Your Fonts",
-      "OpenFontDialog": "Open Add Font Dialog",
-      "ownFontsHint": "You can add your own fonts from Google Fonts or local files."
+      "ThemeConfig": "Ustaw domyślny motyw i czcionki dla wszystkich nowych dzienników",
+      "OpenDialog": "Otwórz okno selektora motywu",
+      "ThemeConfigHint": "Te ustawienia będą stosowane do wszystkich dzienników, w których użytkownicy nie zmienili motywu.",
+      "addOwnFonts": "Dodaj własne czcionki",
+      "OpenFontDialog": "Otwórz okno dodawania czcionki",
+      "ownFontsHint": "Możesz dodać własne czcionki z Google Fonts lub z lokalnych plików."
     },
     "OWNFONT": {
-      "addedFonts": "Here you can load your own fonts, either from local files or Google Fonts.",
-      "remove": "Remove Font",
-      "noFonts": "No fonts added",
-      "addGoogleFont": "Add Fonts from Google Fonts",
-      "googleName": "Font Name",
-      "googleUrl": "Font URL",
-      "add": "Add Field",
-      "addLocalFont": "Add Local Font",
-      "localName": "Font Name",
-      "localPath": "Path to Font File",
-      "save": "Save and Add Fonts",
-      "title": "Add Your Own Fonts"
+      "addedFonts": "Tutaj możesz załadować własne czcionki, zarówno z lokalnych plików, jak i z Google Fonts.",
+      "remove": "Usuń czcionkę",
+      "noFonts": "Brak dodanych czcionek",
+      "addGoogleFont": "Dodaj czcionki z Google Fonts",
+      "googleName": "Nazwa czcionki",
+      "googleUrl": "URL czcionki",
+      "add": "Dodaj pole",
+      "addLocalFont": "Dodaj czcionkę lokalną",
+      "localName": "Nazwa czcionki",
+      "localPath": "Ścieżka do pliku czcionki",
+      "save": "Zapisz i dodaj czcionki",
+      "title": "Dodaj własne czcionki"
     },
     "WARNING": {
-      "errorOnFontLoading": "Error loading font: {font}"
+      "errorOnFontLoading": "Błąd ładowania czcionki: {font}"
     }
   }
 }
