@@ -7,11 +7,9 @@
           <li class="font-entry" data-name="{{font.name}}" data-type="{{font.fontType}}">
             <strong>{{font.name}}</strong>
             {{#if (eq font.fontType "google")}}
-              <span class="font-type">[Google Font]</span>
-              <code>{{font.url}}</code>
+              <span class="font-type">{{localize "JT.SETTING.googleFonts"}}</span>
             {{else}}
-              <span class="font-type">[Local Font]</span>
-              <code>{{font.url}}</code>
+              <span class="font-type">{{localize "JT.SETTING.localFonts"}}</span>
             {{/if}}
             <button type="button" class="remove-font" data-action="{{#if (eq font.fontType 'google')}}removeGoogleFont{{else}}removeLocalFont{{/if}}">
               <i class="fa-solid fa-trash"></i> {{localize "JT.OWNFONT.remove"}}
@@ -28,7 +26,7 @@
     <h3>{{localize "JT.OWNFONT.addGoogleFont"}}</h3>
     <div class="form-fields">
       <label>{{localize "JT.OWNFONT.googleName"}}</label>
-      <input type="text" name="google-name" placeholder="e.g. Roboto">
+      <input type="text" name="google-name" placeholder="{{localize "JT.SETTING.fontUrlPlaceholder"}}">
 
       <label>{{localize "JT.OWNFONT.googleUrl"}}</label>
       <input type="text" name="google-url" placeholder="https://fonts.googleapis.com/css2?family=Roboto">
@@ -42,7 +40,7 @@
     <h3>{{localize "JT.OWNFONT.addLocalFont"}}</h3>
     <div class="form-fields">
       <label>{{localize "JT.OWNFONT.localName"}}</label>
-      <input type="text" name="local-name" placeholder="e.g. MyLocalFont">
+      <input type="text" name="local-name" placeholder="{{localize "JT.SETTING.localfontNamePlaceholder"}}">
       <label>{{localize "JT.OWNFONT.localPath"}}</label>
       <div class="file-picker">
         <input type="text" name="local-path" placeholder="modules/journal-styler/assets/fonts/MyFont.ttf">
@@ -56,9 +54,5 @@
       </button>  
   </section>
   <hr>
-  <footer class="dialog-buttons">
-    <button type="button" class="save-btn" data-action="save">
-      <i class="fa-solid fa-save"></i> {{localize "JT.OWNFONT.save"}}
-    </button>
-  </footer>
+  
 </div>

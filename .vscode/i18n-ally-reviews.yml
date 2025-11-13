@@ -1642,3 +1642,51 @@ reviews:
             suggestion: ''
             type: approve
             time: '2025-11-04T14:53:24.153Z'
+  JT.SETTING.googleFonts:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: 4Nghblr0VMPZWEwJPpacz
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-13T23:34:21.266Z'
+  JT.SETTING.localFonts:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: sdfTTV1jhMRuxEDvqraCZ
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-13T23:34:46.469Z'
+  JT.SETTING.fontUrlPlaceholder:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: zDL8RDKeQpdq40yJ6sFW5
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-13T23:35:56.081Z'
+  JT.SETTING.localfontNamePlaceholder:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Unknown
+              email: ''
+            id: bFp-J0riGHaqqyy-DU35V
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2025-11-13T23:36:41.686Z'

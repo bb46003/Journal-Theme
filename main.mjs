@@ -16,9 +16,9 @@ Hooks.once("init", async function () {
     type: new fields.StringField({
       required: true,
       choices: {
-        1: "Limited",
-        2: "Observer",
-        3: "Owner",
+        1: "OWNERSHIP.LIMITED",
+        2: "OWNERSHIP.OBSERVER",
+        3: "OWNERSHIP.OWNER",
       },
       initial: "1",
       trim: true,
@@ -58,9 +58,9 @@ Hooks.once("init", async function () {
     config: false,
     type: new fields.ArrayField(
       new fields.SchemaField({
-        fontType: new fields.StringField(),//no need for validation code set this value
+        fontType: new fields.StringField(), //no need for validation code set this value
         name: new fields.StringField(),
-        url: new fields.StringField(),//becose we allow local fonts as well, it will be hard to findany valid chcek
+        url: new fields.StringField(), //becose we allow local fonts as well, it will be hard to findany valid chcek
       }),
     ),
   });

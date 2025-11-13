@@ -18,7 +18,6 @@ export class OwnFontsDialog extends api.HandlebarsApplicationMixin(api.Applicati
     },
 
     form: {
-      closeOnSubmit: true,
       handler: OwnFontsDialog.#onSubmit,
     },
     window: { title: "JT.OWNFONT.title" },
